@@ -15,8 +15,14 @@
 - (id)init {
     self = [super init];
     if (self){
-        forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:0.8 direction:BE_PARALLAX_DIRECTION_LEFT];
+        forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest3.png"] speed:1 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest1];
+        
+        forest2 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest2.png"] speed:2 direction:BE_PARALLAX_DIRECTION_LEFT];
+		[self addChild:forest2];
+        
+        forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
+		[self addChild:forest3];
         
         grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:5 direction:BE_PARALLAX_DIRECTION_LEFT];
         [self addChild:grass];
@@ -26,6 +32,11 @@
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
         [self addChild:bear];
+        
+
+        
+
+        
         [self addEventListener:@selector(onAddedToStage:) atObject:self forType:SP_EVENT_TYPE_ADDED_TO_STAGE];
         [self addEventListener:@selector(onRemovedFromStage:) atObject:self forType:SP_EVENT_TYPE_REMOVED_FROM_STAGE];
         
@@ -81,10 +92,14 @@
     
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
-    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255, arc4random() %255)];
-    [debugQuad setX: bearFrontFootCheckPoint.x];
-    [debugQuad setY: bearFrontFootCheckPoint.y];
-    
+
+    SPPoint *testPoint = [SPPoint pointWithX:bear.bounds.x-40 y:bear.bounds.y-20];
+    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255,arc4random() %255)];
+    [debugQuad setX:testPoint.x+bear.width];
+    [debugQuad setY:testPoint.y+bear.height];
+    [debugQuad setPivotX:bear.pivotX+10];
+    [debugQuad setPivotY:bear.pivotY+10];
+    [debugQuad setRotation:bear.rotation];
     [self addChild:debugQuad];
     
     NSLog(@"slope: %f", slope);

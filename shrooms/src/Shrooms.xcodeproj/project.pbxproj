@@ -48,6 +48,12 @@
 		FDC1FB5D16C6D98A00104203 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC1FB5C16C6D98A00104203 /* libSparrow.a */; };
 		FDC1FB6116C6F72A00104203 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB5F16C6F72A00104203 /* Icon.png */; };
 		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
+		FDC1FB6916C7108900104203 /* forest1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6316C7108900104203 /* forest1.png */; };
+		FDC1FB6A16C7108900104203 /* forest1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6416C7108900104203 /* forest1@2x.png */; };
+		FDC1FB6B16C7108900104203 /* forest2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6516C7108900104203 /* forest2.png */; };
+		FDC1FB6C16C7108900104203 /* forest2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6616C7108900104203 /* forest2@2x.png */; };
+		FDC1FB6D16C7108900104203 /* forest3.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6716C7108900104203 /* forest3.png */; };
+		FDC1FB6E16C7108900104203 /* forest3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6816C7108900104203 /* forest3@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +108,12 @@
 		FDC1FB5C16C6D98A00104203 /* libSparrow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSparrow.a; path = "../../../../Library/Developer/Xcode/DerivedData/Shrooms-emrswdkoivvfbeakyryghjeqswub/Build/Products/Debug-iphoneos/libSparrow.a"; sourceTree = "<group>"; };
 		FDC1FB5F16C6F72A00104203 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FDC1FB6016C6F72A00104203 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FDC1FB6316C7108900104203 /* forest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest1.png; sourceTree = "<group>"; };
+		FDC1FB6416C7108900104203 /* forest1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forest1@2x.png"; sourceTree = "<group>"; };
+		FDC1FB6516C7108900104203 /* forest2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest2.png; sourceTree = "<group>"; };
+		FDC1FB6616C7108900104203 /* forest2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forest2@2x.png"; sourceTree = "<group>"; };
+		FDC1FB6716C7108900104203 /* forest3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest3.png; sourceTree = "<group>"; };
+		FDC1FB6816C7108900104203 /* forest3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forest3@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +253,12 @@
 		FD6DCE1416C692350053D5BF /* img */ = {
 			isa = PBXGroup;
 			children = (
+				FDC1FB6316C7108900104203 /* forest1.png */,
+				FDC1FB6416C7108900104203 /* forest1@2x.png */,
+				FDC1FB6516C7108900104203 /* forest2.png */,
+				FDC1FB6616C7108900104203 /* forest2@2x.png */,
+				FDC1FB6716C7108900104203 /* forest3.png */,
+				FDC1FB6816C7108900104203 /* forest3@2x.png */,
 				FD561E2616C6BD5000D58A2A /* level-ground-1@2x.png */,
 				FD561E2716C6BD5000D58A2A /* level-ground-1.png */,
 				B34F7E9A16C6A4FA00BF8239 /* bear_animated.png */,
@@ -332,6 +350,12 @@
 				FD561E2E16C6C56B00D58A2A /* level-ground-1.plist in Resources */,
 				FDC1FB6116C6F72A00104203 /* Icon.png in Resources */,
 				FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */,
+				FDC1FB6916C7108900104203 /* forest1.png in Resources */,
+				FDC1FB6A16C7108900104203 /* forest1@2x.png in Resources */,
+				FDC1FB6B16C7108900104203 /* forest2.png in Resources */,
+				FDC1FB6C16C7108900104203 /* forest2@2x.png in Resources */,
+				FDC1FB6D16C7108900104203 /* forest3.png in Resources */,
+				FDC1FB6E16C7108900104203 /* forest3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
