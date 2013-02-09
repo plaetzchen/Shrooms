@@ -15,18 +15,19 @@
     {
         self.lastTimeTouched = [NSDate date];
         mContents = [[SPSprite alloc] init];
-		mContents.rotation = SP_D2R(90);
-		mContents.x = 320;
+		mContents.x = 0;
+        [mContents setWidth:self.width];
+        [mContents setHeight:self.height];
 		[self addChild:mContents];
 		[mContents release];
+        
 //		sky = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"sky.png"]
 //                                                    speed:0.4
 //                                                direction:BE_PARALLAX_DIRECTION_LEFT];
 //		[mContents addChild:sky];
-//		forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"mountainsback.png"]
-//                                                           speed:2
-//                                                       direction:BE_PARALLAX_DIRECTION_LEFT];
-//		[mContents addChild:forest1];
+		forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:1 direction:BE_PARALLAX_DIRECTION_LEFT];
+		[mContents addChild:forest1];
+        
 //		forest2 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"mountainsfront.png"]
 //                                                           speed:4
 //                                                       direction:BE_PARALLAX_DIRECTION_LEFT];
@@ -44,6 +45,7 @@
 //		[mContents addChild:grass];
         
         bear = [[Bear alloc]init];
+        [bear setY:self.height*0.6];
         [self addChild:bear];
         
 
