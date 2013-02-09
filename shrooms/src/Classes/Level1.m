@@ -7,6 +7,12 @@
 //
 
 #import "Level1.h"
+#import "PointInPolygonChecker.h"
+
+@interface Level1()
+
+@property (nonatomic, retain) PointInPolygonChecker* polychecker;
+@end
 
 @implementation Level1
 
@@ -32,6 +38,10 @@
         self.collisionPoints = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-1" ofType:@"plist"]];
         
         currentPointIndex = 0;
+        
+        PointInPolygonChecker* polychecker = [[PointInPolygonChecker alloc] initWithArray:self.collisionPoints];
+        self.polychecker = polychecker;
+        [polychecker release];
         
     }
     
@@ -80,6 +90,9 @@
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
     
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
+    
+    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:checkPoint];
+    NSLog(@"pointIsInPoly: %i", pointIsInPoly);
     
     SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255, arc4random() %255)];
     [debugQuad setX: bearFrontFootCheckPoint.x];

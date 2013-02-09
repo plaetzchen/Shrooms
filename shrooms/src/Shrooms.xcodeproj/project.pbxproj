@@ -51,6 +51,23 @@
 		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B34F7EAB16C70E8C00BF8239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEFE4BC2101B317600E22471;
+			remoteInfo = Sparrow;
+		};
+		B34F7EAD16C70E8C00BF8239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEEA9335101E32A30071DD21;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,6 +243,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B34F7EA716C70E8C00BF8239 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B34F7EAC16C70E8C00BF8239 /* libSparrow.a */,
+				B34F7EAE16C70E8C00BF8239 /* UnitTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FD46D7D516C665F00013EF5C /* Sparrow Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,12 +337,35 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B34F7EA716C70E8C00BF8239 /* Products */;
+					ProjectRef = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Shrooms */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B34F7EAC16C70E8C00BF8239 /* libSparrow.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSparrow.a;
+			remoteRef = B34F7EAB16C70E8C00BF8239 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B34F7EAE16C70E8C00BF8239 /* UnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTest.octest;
+			remoteRef = B34F7EAD16C70E8C00BF8239 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
