@@ -13,11 +13,11 @@
 - (id)init {
     self = [super init];
     if (self){
-        forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:1 direction:BE_PARALLAX_DIRECTION_LEFT];
+        forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:0.8 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest1];
         
         bear = [[Bear alloc]init];
-        [bear setY:self.height*0.2];
+        [bear setY:self.height*0.6];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
         [self addChild:bear];
@@ -38,10 +38,12 @@
 }
 
 - (void)oneFingerTouched {
-    
+    [bear setRunning:YES];
+    [forest1 start];
 }
 
 - (void)swipeUp {
-    
+    [bear setRunning:NO];
+    [forest1 stop];
 }
 @end

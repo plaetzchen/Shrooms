@@ -46,4 +46,11 @@
     return self;
 }
 
+- (void)setRunning:(BOOL)running {
+    if (running)
+        [self.bearMoving play];
+    else
+        [self.bearMoving pause];
+}
+
 @end

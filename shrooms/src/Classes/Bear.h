@@ -13,5 +13,6 @@
 }
 @property (nonatomic, retain)     SPMovieClip *bearMoving;
 
+- (void)setRunning:(BOOL)running;
 
 @end
