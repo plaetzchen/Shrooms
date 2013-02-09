@@ -59,12 +59,15 @@
     [tweenUp animateProperty:@"y" targetValue:self.y - 50];
     [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(-10)];
     [self.stage.juggler addObject:tweenUp];
-
+    [self.bearMoving pause];
+    
     SPTween *tweenDown = [SPTween tweenWithTarget:self time:0.5 transition:SP_TRANSITION_EASE_IN];
-    [tweenUp animateProperty:@"y" targetValue:self.y + 50];
-    [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(10)];
+    [tweenDown animateProperty:@"y" targetValue:self.y];
+    [tweenDown animateProperty:@"rotation" targetValue:self.rotation];
     tweenDown.delay = 0.5;
     [self.stage.juggler addObject:tweenDown];
+    
+    [self.bearMoving performSelector:@selector(play) withObject:nil afterDelay:1.0];
 }
 
 
