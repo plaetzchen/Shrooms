@@ -17,6 +17,7 @@
     BEParallaxSprite *forest3;
     BEParallaxSprite *grass;
     Bear *bear;
+    NSArray *collisionPoints;
 }
 
 

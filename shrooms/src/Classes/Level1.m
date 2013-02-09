@@ -27,6 +27,14 @@
         [self addChild:bear];
         [self addEventListener:@selector(onAddedToStage:) atObject:self forType:SP_EVENT_TYPE_ADDED_TO_STAGE];
         [self addEventListener:@selector(onRemovedFromStage:) atObject:self forType:SP_EVENT_TYPE_REMOVED_FROM_STAGE];
+        
+        collisionPoints = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-1" ofType:@"plist"]];
+        
+        
+        for (NSDictionary *point in collisionPoints){
+
+        }
+        
     }
     return self;
 }
