@@ -17,11 +17,11 @@
 		B34F7E8716C69B6B00BF8239 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8616C69B6B00BF8239 /* libxml2.dylib */; };
 		B34F7E8916C69B7500BF8239 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8816C69B7500BF8239 /* Social.framework */; };
 		B34F7E8B16C69B8000BF8239 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8A16C69B8000BF8239 /* Accounts.framework */; };
-		B34F7E8D16C69B8900BF8239 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8C16C69B8900BF8239 /* AdSupport.framework */; };
 		B34F7E8F16C69B9500BF8239 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8E16C69B9500BF8239 /* libsqlite3.dylib */; };
 		B34F7E9116C69BA300BF8239 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E9016C69BA300BF8239 /* CFNetwork.framework */; };
 		B34F7E9316C69BAB00BF8239 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E9216C69BAB00BF8239 /* SystemConfiguration.framework */; };
 		B34F7E9516C69BB100BF8239 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E9416C69BB100BF8239 /* MobileCoreServices.framework */; };
+		B34F7E9916C69ED600BF8239 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8C16C69B8900BF8239 /* AdSupport.framework */; };
 		DE3F093811B7B9DC009D4DB0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */; };
 		DE3F093A11B7B9DC009D4DB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093911B7B9DC009D4DB0 /* AudioToolbox.framework */; };
 		DE3F097811B7BABD009D4DB0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F097711B7BABD009D4DB0 /* OpenAL.framework */; };
@@ -112,16 +112,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34F7E8516C69B6100BF8239 /* Twitter.framework in Frameworks */,
+				B34F7E9916C69ED600BF8239 /* AdSupport.framework in Frameworks */,
 				B34F7E9516C69BB100BF8239 /* MobileCoreServices.framework in Frameworks */,
 				B34F7E9316C69BAB00BF8239 /* SystemConfiguration.framework in Frameworks */,
 				B34F7E9116C69BA300BF8239 /* CFNetwork.framework in Frameworks */,
 				DE5C4E6E138ED109004892CA /* libz.dylib in Frameworks */,
 				B34F7E8F16C69B9500BF8239 /* libsqlite3.dylib in Frameworks */,
-				B34F7E8D16C69B8900BF8239 /* AdSupport.framework in Frameworks */,
 				B34F7E8B16C69B8000BF8239 /* Accounts.framework in Frameworks */,
 				B34F7E8916C69B7500BF8239 /* Social.framework in Frameworks */,
 				B34F7E8716C69B6B00BF8239 /* libxml2.dylib in Frameworks */,
-				B34F7E8516C69B6100BF8239 /* Twitter.framework in Frameworks */,
 				DE4A3DB910FFB0FE00FDA492 /* libSparrow.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -163,15 +163,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				B34F7E9416C69BB100BF8239 /* MobileCoreServices.framework */,
-				B34F7E9216C69BAB00BF8239 /* SystemConfiguration.framework */,
-				B34F7E9016C69BA300BF8239 /* CFNetwork.framework */,
-				B34F7E8E16C69B9500BF8239 /* libsqlite3.dylib */,
-				B34F7E8C16C69B8900BF8239 /* AdSupport.framework */,
-				B34F7E8A16C69B8000BF8239 /* Accounts.framework */,
-				B34F7E8816C69B7500BF8239 /* Social.framework */,
-				B34F7E8616C69B6B00BF8239 /* libxml2.dylib */,
-				B34F7E8416C69B6100BF8239 /* Twitter.framework */,
 				DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -206,6 +197,15 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B34F7E9416C69BB100BF8239 /* MobileCoreServices.framework */,
+				B34F7E9216C69BAB00BF8239 /* SystemConfiguration.framework */,
+				B34F7E9016C69BA300BF8239 /* CFNetwork.framework */,
+				B34F7E8E16C69B9500BF8239 /* libsqlite3.dylib */,
+				B34F7E8C16C69B8900BF8239 /* AdSupport.framework */,
+				B34F7E8A16C69B8000BF8239 /* Accounts.framework */,
+				B34F7E8816C69B7500BF8239 /* Social.framework */,
+				B34F7E8616C69B6B00BF8239 /* libxml2.dylib */,
+				B34F7E8416C69B6100BF8239 /* Twitter.framework */,
 				B34F7E8116C6972900BF8239 /* netmera.framework */,
 				DE5C4E6D138ED109004892CA /* libz.dylib */,
 				DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */,
@@ -384,7 +384,7 @@
 				GCC_PREFIX_HEADER = "App-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Shrooms;
 			};
 			name = Debug;
@@ -401,7 +401,7 @@
 				GCC_PREFIX_HEADER = "App-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = Shrooms;
 			};
 			name = Release;
@@ -419,6 +419,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -442,6 +443,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
