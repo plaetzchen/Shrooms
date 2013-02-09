@@ -41,6 +41,8 @@
 		FD6DCE1816C6926F0053D5BF /* bear.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1716C6926F0053D5BF /* bear.png */; };
 		FD6DCE1D16C693D30053D5BF /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1B16C693D30053D5BF /* bg@2x.png */; };
 		FD6DCE1E16C693D30053D5BF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1C16C693D30053D5BF /* bg.png */; };
+		FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1616C6B2BB0053D5BF /* Level1.m */; };
+		FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1916C6B3F10053D5BF /* Scene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		FD6DCE1716C6926F0053D5BF /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear.png; sourceTree = "<group>"; };
 		FD6DCE1B16C693D30053D5BF /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		FD6DCE1C16C693D30053D5BF /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		FD6DCF1516C6B2BB0053D5BF /* Level1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1.h; sourceTree = "<group>"; };
+		FD6DCF1616C6B2BB0053D5BF /* Level1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level1.m; sourceTree = "<group>"; };
+		FD6DCF1816C6B3F10053D5BF /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		FD6DCF1916C6B3F10053D5BF /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FD6DCF0F16C6B1950053D5BF /* Scenes */,
 				FD46D7D516C665F00013EF5C /* Sparrow Extensions */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
@@ -264,6 +271,17 @@
 			path = ../media/img;
 			sourceTree = "<group>";
 		};
+		FD6DCF0F16C6B1950053D5BF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FD6DCF1516C6B2BB0053D5BF /* Level1.h */,
+				FD6DCF1616C6B2BB0053D5BF /* Level1.m */,
+				FD6DCF1816C6B3F10053D5BF /* Scene.h */,
+				FD6DCF1916C6B3F10053D5BF /* Scene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +382,8 @@
 				DE4A3DE510FFB2AF00FDA492 /* Game.m in Sources */,
 				FD46D7D416C665E60013EF5C /* BEParallaxSprite.m in Sources */,
 				FD46D7DA16C668F70013EF5C /* Bear.m in Sources */,
+				FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */,
+				FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

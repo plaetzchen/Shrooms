@@ -26,7 +26,7 @@
         
         // add frames to movie
         NSArray *frames = [atlas texturesStartingWith:@"bear-pos-"];
-        self.bearMoving = [[SPMovieClip alloc] initWithFrames:frames fps:12];
+        self.bearMoving = [[SPMovieClip alloc] initWithFrames:frames fps:16];
         
         // add sounds
         //SPSound *stepSound = [[SPSound alloc] initWithContentsOfFile:@"step.caf"];
