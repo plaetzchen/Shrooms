@@ -81,7 +81,9 @@
     
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
-    
+    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255, arc4random() %255)];
+    [debugQuad setX: bearFrontFootCheckPoint.x];
+    [debugQuad setY: bearFrontFootCheckPoint.y];
     
     [self addChild:debugQuad];
     
