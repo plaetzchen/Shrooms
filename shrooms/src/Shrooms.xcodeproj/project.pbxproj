@@ -37,6 +37,8 @@
 		FD46D7DA16C668F70013EF5C /* Bear.m in Sources */ = {isa = PBXBuildFile; fileRef = FD46D7D916C668F70013EF5C /* Bear.m */; };
 		FD6DCE1616C692690053D5BF /* bear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1516C692690053D5BF /* bear@2x.png */; };
 		FD6DCE1816C6926F0053D5BF /* bear.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1716C6926F0053D5BF /* bear.png */; };
+		FD6DCE1D16C693D30053D5BF /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1B16C693D30053D5BF /* bg@2x.png */; };
+		FD6DCE1E16C693D30053D5BF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1C16C693D30053D5BF /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		FD46D7D916C668F70013EF5C /* Bear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bear.m; sourceTree = "<group>"; };
 		FD6DCE1516C692690053D5BF /* bear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bear@2x.png"; sourceTree = "<group>"; };
 		FD6DCE1716C6926F0053D5BF /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear.png; sourceTree = "<group>"; };
+		FD6DCE1B16C693D30053D5BF /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		FD6DCE1C16C693D30053D5BF /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 		FD6DCE1416C692350053D5BF /* img */ = {
 			isa = PBXGroup;
 			children = (
+				FD6DCE1B16C693D30053D5BF /* bg@2x.png */,
+				FD6DCE1C16C693D30053D5BF /* bg.png */,
 				FD6DCE1716C6926F0053D5BF /* bear.png */,
 				FD6DCE1516C692690053D5BF /* bear@2x.png */,
 			);
@@ -333,6 +339,8 @@
 				DE91028016244F74001FD950 /* Default@2x.png in Resources */,
 				FD6DCE1616C692690053D5BF /* bear@2x.png in Resources */,
 				FD6DCE1816C6926F0053D5BF /* bear.png in Resources */,
+				FD6DCE1D16C693D30053D5BF /* bg@2x.png in Resources */,
+				FD6DCE1E16C693D30053D5BF /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

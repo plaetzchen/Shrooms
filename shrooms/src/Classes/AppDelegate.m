@@ -14,7 +14,7 @@
     {
         UIViewController *rootViewController = [[UIViewController alloc]init];
         mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        mSparrowView = [[SPView alloc] initWithFrame:mWindow.bounds];
+        mSparrowView = [[SPView alloc] initWithFrame:CGRectMake(0, 0, 480, 320)];
         mSparrowView.multipleTouchEnabled = YES;
         mSparrowView.exclusiveTouch = YES;
         [rootViewController.view addSubview:mSparrowView];
@@ -30,7 +30,7 @@
     [SPStage setSupportHighResolutions:YES];
     [SPAudioEngine start];
     
-    Game *game = [[Game alloc] init];        
+    Game *game = [[Game alloc] initWithWidth:mSparrowView.frame.size.width height:mSparrowView.frame.size.height];
     mSparrowView.stage = game;
     mSparrowView.frameRate = 30.0f;
     [game release];
