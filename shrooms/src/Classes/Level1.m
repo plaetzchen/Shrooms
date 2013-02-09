@@ -18,7 +18,7 @@
         forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:0.8 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest1];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
+        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:5 direction:BE_PARALLAX_DIRECTION_LEFT];
         [self addChild:grass];
         
         bear = [[Bear alloc]init];
@@ -69,9 +69,9 @@
     CGPoint currentGrassPoint = CGPointMake(grass.bounds.x*-1,0);
     CGPoint bearFrontFootCheckPoint = CGPointMake(currentGrassPoint.x+bear.x+bear.width, bear.y+bear.height);
     
-    CGFloat slope = ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
+    CGFloat slope = - ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
     CGFloat yOffSet = 0;
-    if (slope == 0) {
+    if (slope == 0 || slope > 100) {
         yOffSet = leftPoint.y;
     }
     else {
@@ -80,6 +80,10 @@
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
     
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
+    
+    
+    
+    [self addChild:debugQuad];
     
     NSLog(@"slope: %f", slope);
     NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
@@ -92,8 +96,8 @@
     } else {
         NSLog(@"drunter");
     }
-    if (slope >-100 || slope != -INFINITY)
-        bear.rotation = slope * -1;
+    if (slope < 100)
+        bear.rotation = slope;
     else
         bear.rotation = 0;
     //bear.y = -checkPoint.y;

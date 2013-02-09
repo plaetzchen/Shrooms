@@ -16,7 +16,7 @@
     {
         UIViewController *rootViewController = [[UIViewController alloc]init];
         mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        mSparrowView = [[SPView alloc] initWithFrame:CGRectMake(0, 0, 480, 320)];
+        mSparrowView = [[SPView alloc] initWithFrame:CGRectMake(0, 0, mWindow.frame.size.height, mWindow.frame.size.width)];
         mSparrowView.multipleTouchEnabled = YES;
         mSparrowView.exclusiveTouch = YES;
         [rootViewController.view addSubview:mSparrowView];

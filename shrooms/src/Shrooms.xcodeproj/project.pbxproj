@@ -46,6 +46,8 @@
 		FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1616C6B2BB0053D5BF /* Level1.m */; };
 		FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1916C6B3F10053D5BF /* Scene.m */; };
 		FDC1FB5D16C6D98A00104203 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC1FB5C16C6D98A00104203 /* libSparrow.a */; };
+		FDC1FB6116C6F72A00104203 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB5F16C6F72A00104203 /* Icon.png */; };
+		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		FD6DCF1816C6B3F10053D5BF /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		FD6DCF1916C6B3F10053D5BF /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		FDC1FB5C16C6D98A00104203 /* libSparrow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSparrow.a; path = "../../../../Library/Developer/Xcode/DerivedData/Shrooms-emrswdkoivvfbeakyryghjeqswub/Build/Products/Debug-iphoneos/libSparrow.a"; sourceTree = "<group>"; };
+		FDC1FB5F16C6F72A00104203 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FDC1FB6016C6F72A00104203 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDC1FB5F16C6F72A00104203 /* Icon.png */,
+				FDC1FB6016C6F72A00104203 /* Icon@2x.png */,
 				FD6DCE1216C6922D0053D5BF /* media */,
 				DE91027D16244F0C001FD950 /* Default.png */,
 				DE91027F16244F74001FD950 /* Default@2x.png */,
@@ -324,6 +330,8 @@
 				FD561E2816C6BD5000D58A2A /* level-ground-1@2x.png in Resources */,
 				FD561E2916C6BD5000D58A2A /* level-ground-1.png in Resources */,
 				FD561E2E16C6C56B00D58A2A /* level-ground-1.plist in Resources */,
+				FDC1FB6116C6F72A00104203 /* Icon.png in Resources */,
+				FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
