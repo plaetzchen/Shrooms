@@ -39,6 +39,7 @@
 		FD46D7DA16C668F70013EF5C /* Bear.m in Sources */ = {isa = PBXBuildFile; fileRef = FD46D7D916C668F70013EF5C /* Bear.m */; };
 		FD561E2816C6BD5000D58A2A /* level-ground-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD561E2616C6BD5000D58A2A /* level-ground-1@2x.png */; };
 		FD561E2916C6BD5000D58A2A /* level-ground-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FD561E2716C6BD5000D58A2A /* level-ground-1.png */; };
+		FD561E2E16C6C56B00D58A2A /* level-ground-1.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD561E2D16C6C56B00D58A2A /* level-ground-1.plist */; };
 		FD6DCE1616C692690053D5BF /* bear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1516C692690053D5BF /* bear@2x.png */; };
 		FD6DCE1816C6926F0053D5BF /* bear.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1716C6926F0053D5BF /* bear.png */; };
 		FD6DCE1D16C693D30053D5BF /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1B16C693D30053D5BF /* bg@2x.png */; };
@@ -111,6 +112,7 @@
 		FD46D7D916C668F70013EF5C /* Bear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bear.m; sourceTree = "<group>"; };
 		FD561E2616C6BD5000D58A2A /* level-ground-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-1@2x.png"; sourceTree = "<group>"; };
 		FD561E2716C6BD5000D58A2A /* level-ground-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-1.png"; sourceTree = "<group>"; };
+		FD561E2D16C6C56B00D58A2A /* level-ground-1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "level-ground-1.plist"; sourceTree = "<group>"; };
 		FD6DCE1516C692690053D5BF /* bear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bear@2x.png"; sourceTree = "<group>"; };
 		FD6DCE1716C6926F0053D5BF /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear.png; sourceTree = "<group>"; };
 		FD6DCE1B16C693D30053D5BF /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				FD6DCE1C16C693D30053D5BF /* bg.png */,
 				FD6DCE1716C6926F0053D5BF /* bear.png */,
 				FD6DCE1516C692690053D5BF /* bear@2x.png */,
+				FD561E2D16C6C56B00D58A2A /* level-ground-1.plist */,
 			);
 			name = img;
 			path = ../media/img;
@@ -375,6 +378,7 @@
 				B34F7E9D16C6A4FA00BF8239 /* bear_animated.xml in Resources */,
 				FD561E2816C6BD5000D58A2A /* level-ground-1@2x.png in Resources */,
 				FD561E2916C6BD5000D58A2A /* level-ground-1.png in Resources */,
+				FD561E2E16C6C56B00D58A2A /* level-ground-1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
