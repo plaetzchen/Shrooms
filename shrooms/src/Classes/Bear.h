@@ -9,9 +9,7 @@
 #import "SPSprite.h"
 
 @interface Bear : SPSprite {
-    SPImage *image;
+    SPImage *bear;
 }
-
-@property (nonatomic, retain) SPImage *image;
 
 @end
