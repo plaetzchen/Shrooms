@@ -55,13 +55,11 @@
 }
 
 - (void)oneFingerTouch {
-    SPQuad *oneQuad = [[SPQuad alloc]initWithWidth:50 height:50 color:SP_COLOR(255, 0, 0)];
-    [self addChild:oneQuad];
+    [forest1 stop];
 }
 
 - (void)swipeUp {
-    SPQuad *oneQuad = [[SPQuad alloc]initWithWidth:50 height:50 color:SP_COLOR(0, 255, 0)];
-    [self addChild:oneQuad];}
-
+    [forest1 start];
+}
 
 @end
