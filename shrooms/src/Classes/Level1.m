@@ -102,14 +102,13 @@
     
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
-
-    SPPoint *testPoint = [SPPoint pointWithX:bear.bounds.x-40 y:bear.bounds.y-20];
-    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255,arc4random() %255)];
-    [debugQuad setX:testPoint.x+bear.width];
-    [debugQuad setY:testPoint.y+bear.height];
-    [debugQuad setPivotX:bear.pivotX+10];
-    [debugQuad setPivotY:bear.pivotY+10];
-    [debugQuad setRotation:bear.rotation];
+    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:checkPoint];
+    NSLog(@"pointIsInPoly: %i", pointIsInPoly);
+    
+    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255, arc4random() %255)];
+    [debugQuad setX: bearFrontFootCheckPoint.x];
+    [debugQuad setY: bearFrontFootCheckPoint.y];
+    
     [self addChild:debugQuad];
     
     NSLog(@"slope: %f", slope);
