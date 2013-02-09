@@ -56,14 +56,16 @@
 NSString* kRotation = @"rotation";
 NSString* kDistY = @"distY";
 - (void)jump{
-    
-    SPTween *tweenUp = [SPTween tweenWithTarget:self time:0.5 transition:SP_TRANSITION_EASE_OUT];
-    [tweenUp animateProperty:@"y" targetValue:self.y - 50];
-    [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(-10)];
-    [self.stage.juggler addObject:tweenUp];
-    [self.bearMoving pause];
-    NSDictionary* dict = @{kRotation:[NSNumber numberWithDouble:self.rotation], kDistY: [NSNumber numberWithDouble:self.y]};
-    [self performSelector:@selector(fallTo:) withObject:dict  afterDelay:0.5];
+    if (!jumping){
+        jumping = YES;
+        SPTween *tweenUp = [SPTween tweenWithTarget:self time:0.5 transition:SP_TRANSITION_EASE_OUT];
+        [tweenUp animateProperty:@"y" targetValue:self.y - 50];
+        [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(-10)];
+        [self.stage.juggler addObject:tweenUp];
+        [self.bearMoving pause];
+        NSDictionary* dict = @{kRotation:[NSNumber numberWithDouble:self.rotation], kDistY: [NSNumber numberWithDouble:self.y]};
+        [self performSelector:@selector(fallTo:) withObject:dict  afterDelay:0.5];
+    }
 }
 
 -(void)fallTo: (NSDictionary*) dict {
@@ -74,9 +76,13 @@ NSString* kDistY = @"distY";
     [tweenDown animateProperty:@"y" targetValue:distY];
     [tweenDown animateProperty:@"rotation" targetValue:rotation];
     [self.stage.juggler addObject:tweenDown];
-    [self.bearMoving performSelector:@selector(play) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(finalizeJump) withObject:nil afterDelay:0.5];
 }
 
+- (void)finalizeJump {
+    [self.bearMoving play];
+    jumping = NO;
+}
 -(void)stopFalling{
 }
 
