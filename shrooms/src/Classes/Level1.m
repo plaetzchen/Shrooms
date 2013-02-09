@@ -18,12 +18,11 @@
         forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"bg.png"] speed:0.8 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest1];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:1 direction:BE_PARALLAX_DIRECTION_LEFT];
-        grass.y =- 160;
+        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
         [self addChild:grass];
         
         bear = [[Bear alloc]init];
-        [bear setY:0];
+        [bear setY:self.height*0.4];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
         [self addChild:bear];
@@ -93,7 +92,11 @@
     } else {
         NSLog(@"drunter");
     }
-    
+    if (slope >-100 || slope != -INFINITY)
+        bear.rotation = slope * -1;
+    else
+        bear.rotation = 0;
+    //bear.y = -checkPoint.y;
     if (currentPointIndex+2 == collisionPoints.count){
         currentPointIndex = 0;
     } else if (currentGrassPoint.x >= rightPoint.x){
