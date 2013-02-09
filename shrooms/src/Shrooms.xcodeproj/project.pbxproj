@@ -24,6 +24,7 @@
 		B34F7E9916C69ED600BF8239 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8C16C69B8900BF8239 /* AdSupport.framework */; };
 		B34F7E9C16C6A4FA00BF8239 /* bear_animated.png in Resources */ = {isa = PBXBuildFile; fileRef = B34F7E9A16C6A4FA00BF8239 /* bear_animated.png */; };
 		B34F7E9D16C6A4FA00BF8239 /* bear_animated.xml in Resources */ = {isa = PBXBuildFile; fileRef = B34F7E9B16C6A4FA00BF8239 /* bear_animated.xml */; };
+		B34F7EA516C706DD00BF8239 /* PointInPolygonChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B34F7EA416C706DD00BF8239 /* PointInPolygonChecker.m */; };
 		DE3F093811B7B9DC009D4DB0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */; };
 		DE3F093A11B7B9DC009D4DB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093911B7B9DC009D4DB0 /* AudioToolbox.framework */; };
 		DE3F097811B7BABD009D4DB0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F097711B7BABD009D4DB0 /* OpenAL.framework */; };
@@ -56,6 +57,23 @@
 		FDC1FB6E16C7108900104203 /* forest3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6816C7108900104203 /* forest3@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B34F7EAB16C70E8C00BF8239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEFE4BC2101B317600E22471;
+			remoteInfo = Sparrow;
+		};
+		B34F7EAD16C70E8C00BF8239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEEA9335101E32A30071DD21;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +96,8 @@
 		B34F7E9416C69BB100BF8239 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B34F7E9A16C6A4FA00BF8239 /* bear_animated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear_animated.png; sourceTree = "<group>"; };
 		B34F7E9B16C6A4FA00BF8239 /* bear_animated.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bear_animated.xml; sourceTree = "<group>"; };
+		B34F7EA316C706DD00BF8239 /* PointInPolygonChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointInPolygonChecker.h; sourceTree = "<group>"; };
+		B34F7EA416C706DD00BF8239 /* PointInPolygonChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointInPolygonChecker.m; sourceTree = "<group>"; };
 		DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DE3F093911B7B9DC009D4DB0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DE3F097711B7BABD009D4DB0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -158,6 +178,8 @@
 				DE4A3DE410FFB2AF00FDA492 /* Game.m */,
 				FD46D7D816C668F70013EF5C /* Bear.h */,
 				FD46D7D916C668F70013EF5C /* Bear.m */,
+				B34F7EA316C706DD00BF8239 /* PointInPolygonChecker.h */,
+				B34F7EA416C706DD00BF8239 /* PointInPolygonChecker.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -231,6 +253,15 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B34F7EA716C70E8C00BF8239 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B34F7EAC16C70E8C00BF8239 /* libSparrow.a */,
+				B34F7EAE16C70E8C00BF8239 /* UnitTest.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FD46D7D516C665F00013EF5C /* Sparrow Extensions */ = {
@@ -324,12 +355,35 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B34F7EA716C70E8C00BF8239 /* Products */;
+					ProjectRef = DE4A3DA210FFB0D400FDA492 /* Sparrow.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Shrooms */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B34F7EAC16C70E8C00BF8239 /* libSparrow.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSparrow.a;
+			remoteRef = B34F7EAB16C70E8C00BF8239 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B34F7EAE16C70E8C00BF8239 /* UnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTest.octest;
+			remoteRef = B34F7EAD16C70E8C00BF8239 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -373,6 +427,7 @@
 				FD46D7DA16C668F70013EF5C /* Bear.m in Sources */,
 				FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */,
 				FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */,
+				B34F7EA516C706DD00BF8239 /* PointInPolygonChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

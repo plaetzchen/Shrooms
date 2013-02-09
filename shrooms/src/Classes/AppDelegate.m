@@ -49,7 +49,15 @@
     [mSparrowView addGestureRecognizer:oneFingerRecognizer];
     [mSparrowView addGestureRecognizer:swipeUpRecognizer];
     
-// Netmera setup
+    [self netmeraSetup];
+    
+    [pool release];
+}
+
+-(void) netmeraSetup
+{
+    
+    // Netmera setup
     [NetmeraClient initWithApiKey:@"WVhCd1ZYSnNQV2gwZEhBbE0wRWxNa1lsTWtZMU1qRTJPRGM1TWk1dVpYUnRaWEpoTG1OdmJTVXpRVGd3SlRKR2JXOWlhVzFsY21FbE1rWm5ZV1JuWlhRbE1rWjBkWFJ2Y21saGJDNTRiV3dtYm0xVGFYUmxWWEpzUFdoMGRIQWxNMEVsTWtZbE1rWTFNakUyT0RjNU1pNXVaWFJ0WlhKaExtTnZiU1V6UVRnd0ptMXZaSFZzWlVsa1BURXhOakF6Sm1Gd2NFbGtQVFV5TVRZNE56a3lKbTV0VkdWdGNHeGhkR1U5Ylc5aWFYUmxiWEJzWVhSbEptOTNibVZ5U1dROVltVnRlV0Z3Y0Naa2IyMWhhVzQ5Ym1WMGJXVnlZUzVqYjIwbWJtMVRhWFJsUFRVeU1UWTROemt5Sm05M2JtVnlVbTlzWlZSNWNHVTlNU1oyYVdWM1pYSlNiMnhsVkhsd1pUMHhKblpwWlhkbGNrbGtQV0psYlhsaGNIQW0"];
     
     NetmeraContent *content = [[NetmeraContent alloc]initWithObjectName:@"BeMyApp2013"];
@@ -58,9 +66,7 @@
     [content add:@"surname" object:@"Amende"];
     [content add:@"projectname" object:@"Shrooms"];
     [content createInBackground];
-    
-    
-    [pool release];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application 
