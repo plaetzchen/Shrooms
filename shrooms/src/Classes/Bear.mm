@@ -9,14 +9,20 @@
 #import "Bear.h"
 
 @implementation Bear
+@synthesize image;
 
 - (id)init {
     if (self = [super init]) {
-		bear = [[SPImage alloc]initWithContentsOfFile:@"bear.png"];
+		image = [[SPImage alloc]initWithContentsOfFile:@"bear.png"];
         
-        [self addChild:bear];
+        [self addChild:image];
 	}
     return self;
+}
+
+- (void)dealloc {
+    [image release];
+    [super dealloc];
 }
 
 @end

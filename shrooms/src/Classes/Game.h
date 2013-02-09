@@ -5,6 +5,8 @@
 
 #import <Foundation/Foundation.h>
 #import "BEParallaxSprite.h"
+#import "Box2D.h"
+#import "GLES-Render.h"
 #import "Bear.h"
 
 @interface Game : SPStage {
@@ -15,8 +17,8 @@
     BEParallaxSprite *grass;
     SPSprite *mContents;
     Bear *bear;
-    
+    b2World* world;
+    GLESDebugDraw *m_debugDraw;
 }
 
-@property (nonatomic, retain) NSDate *lastTimeTouched;
 @end
