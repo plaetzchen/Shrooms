@@ -11,5 +11,7 @@
 @interface Bear : SPSprite {
     SPImage *bear;
 }
+@property (nonatomic, retain)     SPMovieClip *bearMoving;
+
 
 @end

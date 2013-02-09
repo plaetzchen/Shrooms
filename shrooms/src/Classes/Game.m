@@ -45,14 +45,14 @@
 //		[mContents addChild:grass];
         
         bear = [[Bear alloc]init];
-        [bear setY:self.height*0.6];
+        [bear setY:self.height*0.2];
         [self addChild:bear];
-        
+        [self.juggler addObject:bear.bearMoving];
 
-        
     }
     return self;
 }
+
 
 - (void)oneFingerTouch {
     [forest1 stop];
