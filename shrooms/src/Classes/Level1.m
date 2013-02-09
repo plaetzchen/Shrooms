@@ -43,7 +43,7 @@
 }
 
 - (void)swipeUp {
-    [bear setRunning:NO];
-    [forest1 stop];
+    [bear jump];
+    
 }
 @end

@@ -53,4 +53,19 @@
         [self.bearMoving pause];
 }
 
+- (void)jump{
+    
+    SPTween *tweenUp = [SPTween tweenWithTarget:self time:0.5 transition:SP_TRANSITION_EASE_OUT];
+    [tweenUp animateProperty:@"y" targetValue:self.y - 50];
+    [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(-10)];
+    [self.stage.juggler addObject:tweenUp];
+
+    SPTween *tweenDown = [SPTween tweenWithTarget:self time:0.5 transition:SP_TRANSITION_EASE_IN];
+    [tweenUp animateProperty:@"y" targetValue:self.y + 50];
+    [tweenUp animateProperty:@"rotation" targetValue:self.rotation + SP_D2R(10)];
+    tweenDown.delay = 0.5;
+    [self.stage.juggler addObject:tweenDown];
+}
+
+
 @end
