@@ -18,7 +18,9 @@
     BEParallaxSprite *grass;
     Bear *bear;
     NSArray *collisionPoints;
+    NSUInteger currentPointIndex;
 }
 
+@property (nonatomic, retain) NSArray *collisionPoints;
 
 @end
