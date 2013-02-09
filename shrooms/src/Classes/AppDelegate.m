@@ -16,7 +16,7 @@
     {
         UIViewController *rootViewController = [[UIViewController alloc]init];
         mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        mSparrowView = [[SPView alloc] initWithFrame:CGRectMake(0, 0, 480, 320)];
+        mSparrowView = [[SPView alloc] initWithFrame:CGRectMake(0, 0, mWindow.frame.size.height, mWindow.frame.size.width)];
         mSparrowView.multipleTouchEnabled = YES;
         mSparrowView.exclusiveTouch = YES;
         [rootViewController.view addSubview:mSparrowView];
@@ -53,10 +53,10 @@
     [NetmeraClient initWithApiKey:@"WVhCd1ZYSnNQV2gwZEhBbE0wRWxNa1lsTWtZMU1qRTJPRGM1TWk1dVpYUnRaWEpoTG1OdmJTVXpRVGd3SlRKR2JXOWlhVzFsY21FbE1rWm5ZV1JuWlhRbE1rWjBkWFJ2Y21saGJDNTRiV3dtYm0xVGFYUmxWWEpzUFdoMGRIQWxNMEVsTWtZbE1rWTFNakUyT0RjNU1pNXVaWFJ0WlhKaExtTnZiU1V6UVRnd0ptMXZaSFZzWlVsa1BURXhOakF6Sm1Gd2NFbGtQVFV5TVRZNE56a3lKbTV0VkdWdGNHeGhkR1U5Ylc5aWFYUmxiWEJzWVhSbEptOTNibVZ5U1dROVltVnRlV0Z3Y0Naa2IyMWhhVzQ5Ym1WMGJXVnlZUzVqYjIwbWJtMVRhWFJsUFRVeU1UWTROemt5Sm05M2JtVnlVbTlzWlZSNWNHVTlNU1oyYVdWM1pYSlNiMnhsVkhsd1pUMHhKblpwWlhkbGNrbGtQV0psYlhsaGNIQW0"];
     
     NetmeraContent *content = [[NetmeraContent alloc]initWithObjectName:@"BeMyApp2013"];
-    [content add:@"email" object:@"bemyapp2013@netmera.com"];
-    [content add:@"name" object:@"BeMyApp2013"];
-    [content add:@"surname" object:@"BeMyApp2013"];
-    [content add:@"projectname" object:@"BeMyApp 2013 Project"];
+    [content add:@"email" object:@"xoxo@zutrinken.com"];
+    [content add:@"name" object:@"Peter"];
+    [content add:@"surname" object:@"Amende"];
+    [content add:@"projectname" object:@"Shrooms"];
     [content createInBackground];
     
     

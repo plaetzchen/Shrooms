@@ -10,7 +10,9 @@
 
 @interface Bear : SPSprite {
     SPImage *bear;
+    BOOL jumping;
 }
+
 @property (nonatomic, retain)     SPMovieClip *bearMoving;
 
 - (void)setRunning:(BOOL)running;
