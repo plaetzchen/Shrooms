@@ -12,8 +12,7 @@
 
 - (id)init {
     if (self = [super init]) {
-		bear = [[SPTextureAtlas alloc]initWithContentsOfFile:@"" texture:@""];
-        
+		bear = [[SPImage alloc]initWithContentsOfFile:@"bear.png"];
         
         [self addChild:bear];
 	}

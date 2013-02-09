@@ -9,7 +9,7 @@
 #import "SPSprite.h"
 
 @interface Bear : SPSprite {
-    SPTextureAtlas *bear;
+    SPImage *bear;
 }
 
 @end

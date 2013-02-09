@@ -43,6 +43,9 @@
 //		grass.y = 320-grass.height;
 //		[mContents addChild:grass];
         
+        bear = [[Bear alloc]init];
+        [self addChild:bear];
+        
 
         
     }
