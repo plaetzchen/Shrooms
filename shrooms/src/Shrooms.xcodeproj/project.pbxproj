@@ -24,6 +24,7 @@
 		DE91027E16244F0C001FD950 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91027D16244F0C001FD950 /* Default.png */; };
 		DE91028016244F74001FD950 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91027F16244F74001FD950 /* Default@2x.png */; };
 		FD46D7D416C665E60013EF5C /* BEParallaxSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = FD46D7D316C665E60013EF5C /* BEParallaxSprite.m */; };
+		FD46D7DA16C668F70013EF5C /* Bear.m in Sources */ = {isa = PBXBuildFile; fileRef = FD46D7D916C668F70013EF5C /* Bear.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		DE91027F16244F74001FD950 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FD46D7D216C665E60013EF5C /* BEParallaxSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEParallaxSprite.h; sourceTree = "<group>"; };
 		FD46D7D316C665E60013EF5C /* BEParallaxSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEParallaxSprite.m; sourceTree = "<group>"; };
+		FD46D7D816C668F70013EF5C /* Bear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bear.h; sourceTree = "<group>"; };
+		FD46D7D916C668F70013EF5C /* Bear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bear.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 				DE4A3DE310FFB2AF00FDA492 /* Game.h */,
 				DE4A3DE410FFB2AF00FDA492 /* Game.m */,
+				FD46D7D816C668F70013EF5C /* Bear.h */,
+				FD46D7D916C668F70013EF5C /* Bear.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				DE4A3DE510FFB2AF00FDA492 /* Game.m in Sources */,
 				FD46D7D416C665E60013EF5C /* BEParallaxSprite.m in Sources */,
+				FD46D7DA16C668F70013EF5C /* Bear.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

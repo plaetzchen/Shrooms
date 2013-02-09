@@ -12,9 +12,13 @@
 {
     if ((self = [super init]))
     {
+        UIViewController *rootViewController = [[UIViewController alloc]init];
         mWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        mSparrowView = [[SPView alloc] initWithFrame:mWindow.bounds]; 
-        [mWindow addSubview:mSparrowView];
+        mSparrowView = [[SPView alloc] initWithFrame:mWindow.bounds];
+        mSparrowView.multipleTouchEnabled = YES;
+        mSparrowView.exclusiveTouch = YES;
+        [rootViewController.view addSubview:mSparrowView];
+        mWindow.rootViewController = rootViewController;
     }
     return self;
 }
@@ -33,6 +37,15 @@
     
     [mWindow makeKeyAndVisible];
     [mSparrowView start];
+    
+    UITapGestureRecognizer *oneFingerRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:mSparrowView.stage action:@selector(oneFingerTouch)];
+    [oneFingerRecognizer setNumberOfTouchesRequired:1];
+    
+    UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:mSparrowView.stage action:@selector(swipeUp)];
+    [swipeUpRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
+
+    [mSparrowView addGestureRecognizer:oneFingerRecognizer];
+    [mSparrowView addGestureRecognizer:swipeUpRecognizer];
     
     [pool release];
 }
