@@ -21,6 +21,7 @@
     Bear *bear;
     LevelGround *ground;
     NSArray *collisionPoints;
+    NSUInteger* currentCollisionPointsIndex;
     NSUInteger currentPointIndex;
 }
 

@@ -72,8 +72,11 @@ float speed = 2.0;
         [self addEventListener:@selector(onAddedToStage:) atObject:self forType:SP_EVENT_TYPE_ADDED_TO_STAGE];
         [self addEventListener:@selector(onRemovedFromStage:) atObject:self forType:SP_EVENT_TYPE_REMOVED_FROM_STAGE];
         
-        self.collisionPoints = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-1" ofType:@"plist"]];
+        NSArray* levelGround1 = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-1" ofType:@"plist"]];
+        NSArray* levelGround2 = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-2" ofType:@"plist"]];
         
+        self.collisionPoints = @[levelGround1,levelGround2];
+        currentCollisionPointsIndex = 0;
         currentPointIndex = 0;
         
         PointInPolygonChecker* polychecker = [[PointInPolygonChecker alloc] initWithArray:self.collisionPoints];
@@ -135,9 +138,9 @@ float speed = 2.0;
 //        [self setRunning:NO];
 //    }
     
-    
-    NSDictionary* leftDict = self.collisionPoints[currentPointIndex];
-    NSDictionary* rightDict = self.collisionPoints[currentPointIndex+1];
+    NSArray* currentCollissionPoints = [self.collisionPoints objectAtIndex:currentCollisionPointsIndex];
+    NSDictionary* leftDict = currentCollissionPoints[currentPointIndex];
+    NSDictionary* rightDict = currentCollissionPoints[currentPointIndex+1];
     CGPoint leftPoint = CGPointMake([leftDict[@"x"] floatValue], [leftDict[@"y"] floatValue]);
     CGPoint rightPoint = CGPointMake([rightDict[@"x"] floatValue], [rightDict[@"y"] floatValue]);
 
@@ -198,8 +201,13 @@ float speed = 2.0;
         bear.rotation = 0;
     }
     //bear.y = -checkPoint.y;
-    if (currentPointIndex+2 >= collisionPoints.count){
+    if (currentPointIndex+2 >= currentCollissionPoints.count){  // we've reached the end of this ground piece
         currentPointIndex = 0;
+        currentCollisionPointsIndex++;
+        if (currentCollissionPoints >= collisionPoints.count ) {
+            currentCollisionPointsIndex = 0;
+        }
+        
     } else if (currentGrassPoint.x >= rightPoint.x){
         currentPointIndex++;
     }

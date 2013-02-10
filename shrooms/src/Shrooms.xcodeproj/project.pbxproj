@@ -25,6 +25,7 @@
 		B34F7E9C16C6A4FA00BF8239 /* bear_animated.png in Resources */ = {isa = PBXBuildFile; fileRef = B34F7E9A16C6A4FA00BF8239 /* bear_animated.png */; };
 		B34F7E9D16C6A4FA00BF8239 /* bear_animated.xml in Resources */ = {isa = PBXBuildFile; fileRef = B34F7E9B16C6A4FA00BF8239 /* bear_animated.xml */; };
 		B34F7EA516C706DD00BF8239 /* PointInPolygonChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B34F7EA416C706DD00BF8239 /* PointInPolygonChecker.m */; };
+		B3AD4E3816C7E9E700B1B745 /* level-ground-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3AD4E3716C7E9E700B1B745 /* level-ground-2.plist */; };
 		DE3F093811B7B9DC009D4DB0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */; };
 		DE3F093A11B7B9DC009D4DB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F093911B7B9DC009D4DB0 /* AudioToolbox.framework */; };
 		DE3F097811B7BABD009D4DB0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3F097711B7BABD009D4DB0 /* OpenAL.framework */; };
@@ -120,6 +121,7 @@
 		B34F7E9B16C6A4FA00BF8239 /* bear_animated.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bear_animated.xml; sourceTree = "<group>"; };
 		B34F7EA316C706DD00BF8239 /* PointInPolygonChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointInPolygonChecker.h; sourceTree = "<group>"; };
 		B34F7EA416C706DD00BF8239 /* PointInPolygonChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointInPolygonChecker.m; sourceTree = "<group>"; };
+		B3AD4E3716C7E9E700B1B745 /* level-ground-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "level-ground-2.plist"; sourceTree = "<group>"; };
 		DE3F093711B7B9DC009D4DB0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DE3F093911B7B9DC009D4DB0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DE3F097711B7BABD009D4DB0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -358,6 +360,7 @@
 				FD6DCE1716C6926F0053D5BF /* bear.png */,
 				FD6DCE1516C692690053D5BF /* bear@2x.png */,
 				FD561E2D16C6C56B00D58A2A /* level-ground-1.plist */,
+				B3AD4E3716C7E9E700B1B745 /* level-ground-2.plist */,
 			);
 			name = img;
 			path = ../media/img;
@@ -508,6 +511,7 @@
 				FD9406BA16C7C7B100C5D52D /* level-ground-6@2x.png in Resources */,
 				FD9406BD16C7D06A00C5D52D /* forest0.png in Resources */,
 				FD9406BE16C7D06A00C5D52D /* forest0@2x.png in Resources */,
+				B3AD4E3816C7E9E700B1B745 /* level-ground-2.plist in Resources */,
 				FDA1F7D716C7E7A000607DE3 /* btn-highscore.png in Resources */,
 				FDA1F7D816C7E7A000607DE3 /* btn-highscore@2x.png in Resources */,
 				FDA1F7D916C7E7A000607DE3 /* btn-new_game.png in Resources */,
