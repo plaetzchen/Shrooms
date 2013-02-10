@@ -131,7 +131,7 @@ float speed = 2.0;
     
     CGFloat slope = - ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
     CGFloat yOffSet = 0;
-    if (slope == 0 || slope > 100) {
+    if (slope == 0 || slope > 1) {
         yOffSet = leftPoint.y;
     }
     else {
@@ -140,6 +140,7 @@ float speed = 2.0;
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
     
     bear.rotation = slope;
+    CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
     SPPoint *checkPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
 //    
@@ -147,27 +148,42 @@ float speed = 2.0;
 //    [debugQuad setX:checkPoint.x];
 //    [debugQuad setY:checkPoint.y];
 //    [grass addChild:debugQuad];
+
+    SPPoint *testPoint = [SPPoint pointWithX:bear.bounds.x-40 y:bear.bounds.y-20];
+    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255,arc4random() %255)];
+    [debugQuad setX:testPoint.x+bear.width];
+    [debugQuad setY:testPoint.y+bear.height];
+    [debugQuad setPivotX:bear.pivotX+10];
+    [debugQuad setPivotY:bear.pivotY+10];
+    [debugQuad setRotation:bear.rotation];
+    [self addChild:debugQuad];
     
     BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:checkPoint];
     NSLog(@"pointIsInPoly: %i", pointIsInPoly);
     NSLog(@"Checkpoint: %@",checkPoint.description);
+    NSLog(@"slope: %f", slope);
+    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
+    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
     
-//    NSLog(@"slope: %f", slope);
-//    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
-//    
-//    CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
-//    
-//    if (deltaBearFoot < 0){
-//        NSLog(@"drüber");
-//    } else {
-//        NSLog(@"drunter");
-//    }
-//    if (slope < 100)
-//        bear.rotation = slope;
-//    else
-//        bear.rotation = 0;
+    CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
+    
+    if (deltaBearFoot < 0){
+        NSLog(@"drüber");
+    } else {
+        NSLog(@"drunter");
+    }
+    float rotation = fmodf( slope , PI / 4);
+    NSLog(@"rotation: %f", rotation);
+
+    if (rotation < 1 || rotation > 1){
+        bear.rotation =  rotation;
+//        bear.y = - checkPoint.y;
+    }
+    else{
+        bear.rotation = 0;
+    }
     //bear.y = -checkPoint.y;
-    if (currentPointIndex+2 == collisionPoints.count){
+    if (currentPointIndex+2 >= collisionPoints.count){
         currentPointIndex = 0;
     } else if (currentGrassPoint.x >= rightPoint.x){
         currentPointIndex++;
