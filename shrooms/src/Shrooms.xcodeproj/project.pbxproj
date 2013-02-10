@@ -59,6 +59,15 @@
 		FD9406BA16C7C7B100C5D52D /* level-ground-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406B016C7C7B100C5D52D /* level-ground-6@2x.png */; };
 		FD9406BD16C7D06A00C5D52D /* forest0.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406BB16C7D06A00C5D52D /* forest0.png */; };
 		FD9406BE16C7D06A00C5D52D /* forest0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406BC16C7D06A00C5D52D /* forest0@2x.png */; };
+		FDA1F7D716C7E7A000607DE3 /* btn-highscore.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7CF16C7E7A000607DE3 /* btn-highscore.png */; };
+		FDA1F7D816C7E7A000607DE3 /* btn-highscore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D016C7E7A000607DE3 /* btn-highscore@2x.png */; };
+		FDA1F7D916C7E7A000607DE3 /* btn-new_game.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D116C7E7A000607DE3 /* btn-new_game.png */; };
+		FDA1F7DA16C7E7A000607DE3 /* btn-new_game@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D216C7E7A000607DE3 /* btn-new_game@2x.png */; };
+		FDA1F7DB16C7E7A000607DE3 /* credits.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D316C7E7A000607DE3 /* credits.png */; };
+		FDA1F7DC16C7E7A000607DE3 /* credits@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D416C7E7A000607DE3 /* credits@2x.png */; };
+		FDA1F7DD16C7E7A000607DE3 /* shrooms-ground-0.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D516C7E7A000607DE3 /* shrooms-ground-0.png */; };
+		FDA1F7DE16C7E7A000607DE3 /* shrooms-ground-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA1F7D616C7E7A000607DE3 /* shrooms-ground-0@2x.png */; };
+		FDA1F7E116C7E7DF00607DE3 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1F7E016C7E7DE00607DE3 /* MainMenu.m */; };
 		FDC1FB5D16C6D98A00104203 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC1FB5C16C6D98A00104203 /* libSparrow.a */; };
 		FDC1FB6116C6F72A00104203 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB5F16C6F72A00104203 /* Icon.png */; };
 		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
@@ -152,6 +161,16 @@
 		FD9406B016C7C7B100C5D52D /* level-ground-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-6@2x.png"; sourceTree = "<group>"; };
 		FD9406BB16C7D06A00C5D52D /* forest0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest0.png; sourceTree = "<group>"; };
 		FD9406BC16C7D06A00C5D52D /* forest0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forest0@2x.png"; sourceTree = "<group>"; };
+		FDA1F7CF16C7E7A000607DE3 /* btn-highscore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-highscore.png"; sourceTree = "<group>"; };
+		FDA1F7D016C7E7A000607DE3 /* btn-highscore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-highscore@2x.png"; sourceTree = "<group>"; };
+		FDA1F7D116C7E7A000607DE3 /* btn-new_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new_game.png"; sourceTree = "<group>"; };
+		FDA1F7D216C7E7A000607DE3 /* btn-new_game@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new_game@2x.png"; sourceTree = "<group>"; };
+		FDA1F7D316C7E7A000607DE3 /* credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credits.png; sourceTree = "<group>"; };
+		FDA1F7D416C7E7A000607DE3 /* credits@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credits@2x.png"; sourceTree = "<group>"; };
+		FDA1F7D516C7E7A000607DE3 /* shrooms-ground-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shrooms-ground-0.png"; sourceTree = "<group>"; };
+		FDA1F7D616C7E7A000607DE3 /* shrooms-ground-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shrooms-ground-0@2x.png"; sourceTree = "<group>"; };
+		FDA1F7DF16C7E7DE00607DE3 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		FDA1F7E016C7E7DE00607DE3 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		FDC1FB5C16C6D98A00104203 /* libSparrow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSparrow.a; path = "../../../../Library/Developer/Xcode/DerivedData/Shrooms-emrswdkoivvfbeakyryghjeqswub/Build/Products/Debug-iphoneos/libSparrow.a"; sourceTree = "<group>"; };
 		FDC1FB5F16C6F72A00104203 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FDC1FB6016C6F72A00104203 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -311,6 +330,7 @@
 		FD6DCE1416C692350053D5BF /* img */ = {
 			isa = PBXGroup;
 			children = (
+				FDA1F7CE16C7E78A00607DE3 /* menu */,
 				FD9406BB16C7D06A00C5D52D /* forest0.png */,
 				FD9406BC16C7D06A00C5D52D /* forest0@2x.png */,
 				FD9406A716C7C7B100C5D52D /* level-ground-2.png */,
@@ -351,6 +371,8 @@
 				FD6DCF1616C6B2BB0053D5BF /* Level1.m */,
 				FD6DCF1816C6B3F10053D5BF /* Scene.h */,
 				FD6DCF1916C6B3F10053D5BF /* Scene.m */,
+				FDA1F7DF16C7E7DE00607DE3 /* MainMenu.h */,
+				FDA1F7E016C7E7DE00607DE3 /* MainMenu.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -362,6 +384,21 @@
 				FD9406A516C7B75200C5D52D /* LevelGround.m */,
 			);
 			name = "Level Helpers";
+			sourceTree = "<group>";
+		};
+		FDA1F7CE16C7E78A00607DE3 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				FDA1F7CF16C7E7A000607DE3 /* btn-highscore.png */,
+				FDA1F7D016C7E7A000607DE3 /* btn-highscore@2x.png */,
+				FDA1F7D116C7E7A000607DE3 /* btn-new_game.png */,
+				FDA1F7D216C7E7A000607DE3 /* btn-new_game@2x.png */,
+				FDA1F7D316C7E7A000607DE3 /* credits.png */,
+				FDA1F7D416C7E7A000607DE3 /* credits@2x.png */,
+				FDA1F7D516C7E7A000607DE3 /* shrooms-ground-0.png */,
+				FDA1F7D616C7E7A000607DE3 /* shrooms-ground-0@2x.png */,
+			);
+			name = menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +508,14 @@
 				FD9406BA16C7C7B100C5D52D /* level-ground-6@2x.png in Resources */,
 				FD9406BD16C7D06A00C5D52D /* forest0.png in Resources */,
 				FD9406BE16C7D06A00C5D52D /* forest0@2x.png in Resources */,
+				FDA1F7D716C7E7A000607DE3 /* btn-highscore.png in Resources */,
+				FDA1F7D816C7E7A000607DE3 /* btn-highscore@2x.png in Resources */,
+				FDA1F7D916C7E7A000607DE3 /* btn-new_game.png in Resources */,
+				FDA1F7DA16C7E7A000607DE3 /* btn-new_game@2x.png in Resources */,
+				FDA1F7DB16C7E7A000607DE3 /* credits.png in Resources */,
+				FDA1F7DC16C7E7A000607DE3 /* credits@2x.png in Resources */,
+				FDA1F7DD16C7E7A000607DE3 /* shrooms-ground-0.png in Resources */,
+				FDA1F7DE16C7E7A000607DE3 /* shrooms-ground-0@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +535,7 @@
 				FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */,
 				B34F7EA516C706DD00BF8239 /* PointInPolygonChecker.m in Sources */,
 				FD9406A616C7B75200C5D52D /* LevelGround.m in Sources */,
+				FDA1F7E116C7E7DF00607DE3 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

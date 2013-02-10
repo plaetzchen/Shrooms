@@ -34,24 +34,39 @@ float speed = 2.0;
         forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest3 atIndex:2];
 
+//        
+//        NSArray *parts = @[@"level-ground-1.png",@"level-ground-2.png",@"level-ground-4.png",@"level-ground-6.png",@"level-ground-5.png",@"level-ground-3.png"];
+//        
+//       ground = [[LevelGround alloc]initWithParts:parts slots:nil speed:10];
+//
+//        
+//        ground.y = self.height - ground.height;
         
-        NSArray *parts = @[@"level-ground-1.png",@"level-ground-2.png",@"level-ground-4.png",@"level-ground-6.png",@"level-ground-5.png",@"level-ground-3.png"];
+        SPImage *ground1 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-1.png"];
+        //SPImage *ground2 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-2.png"];
+        //ground2.x = ground1.width;
         
-       ground = [[LevelGround alloc]initWithParts:parts slots:nil speed:10];
+        //float width = ground1.width + ground2.width;
 
+        SPRenderTexture *groundTexture = [[SPRenderTexture alloc]initWithWidth:1440 height:320];
+        [groundTexture bundleDrawCalls:^{
+            [groundTexture drawObject:ground1];
+            //[groundTexture drawObject:ground2];
+        }];
         
-        ground.y = self.height - ground.height;
+        grass = [BEParallaxSprite parallexSpriteWithTexture:groundTexture speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
+		[self addChild:grass atIndex:3];
         
         bear = [[Bear alloc]init];
         [bear setY:ground.height*0.4];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
-        [ground addChild:bear atIndex:1];
+        [self addChild:bear atIndex:4];
         
-        [self addChild:ground atIndex:3];
+       // [self addChild:ground atIndex:3];
         
         forest4 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest0.png"] speed:20 direction:BE_PARALLAX_DIRECTION_LEFT];
-		[self addChild:forest4 atIndex:4];
+		[self addChild:forest4 atIndex:5];
 
         
         [self addEventListener:@selector(onAddedToStage:) atObject:self forType:SP_EVENT_TYPE_ADDED_TO_STAGE];
