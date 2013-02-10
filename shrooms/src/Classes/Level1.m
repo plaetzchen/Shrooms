@@ -33,18 +33,11 @@ float speed = 2.0;
         
         forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest3 atIndex:2];
-        
-        SPImage *ground1 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
-        SPImage *ground2 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-2.png"];
-        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-4.png"];
-        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-6.png"];
-        SPImage *ground5 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-5.png"];
-        SPImage *ground6 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-3.png"];
 
         
-        NSArray *parts = @[ground1,ground2,ground3,ground4,ground5,ground6];
+        NSArray *parts = @[@"level-ground-1.png",@"level-ground-2.png",@"level-ground-4.png",@"level-ground-6.png",@"level-ground-5.png",@"level-ground-3.png"];
         
-       ground = [[LevelGround alloc]initWithParts:parts slots:nil];
+       ground = [[LevelGround alloc]initWithParts:parts slots:nil speed:10];
 
         
         ground.y = self.height - ground.height;
@@ -53,10 +46,12 @@ float speed = 2.0;
         [bear setY:ground.height*0.4];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
-        [ground addChild:bear atIndex:parts.count];
+        [ground addChild:bear atIndex:1];
         
         [self addChild:ground atIndex:3];
         
+        forest4 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest0.png"] speed:20 direction:BE_PARALLAX_DIRECTION_LEFT];
+		[self addChild:forest4 atIndex:4];
 
         
         [self addEventListener:@selector(onAddedToStage:) atObject:self forType:SP_EVENT_TYPE_ADDED_TO_STAGE];
@@ -102,24 +97,26 @@ float speed = 2.0;
         [forest1 start];
         [forest2 start];
         [forest3 start];
+        [forest4 start];
         [sky start];
     } else {
         [bear setRunning:NO];
         [forest1 stop];
         [forest2 stop];
         [forest3 stop];
+        [forest4 stop];
         [sky stop];
     }
 }
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
     
-    if (-ground.x < (1440*6)-self.stage.width) {
-        ground.x -= 2.0f*speed;
-        bear.x += 2.0f*speed;
-        speed = speed * 1.01;
-    } else {
-        [self setRunning:NO];
-    }
+//    if (-ground.x < (1440*6)-self.stage.width) {
+//        ground.x -= 2.0f*speed;
+//        bear.x += 2.0f*speed;
+//        speed = speed * 1.01;
+//    } else {
+//        [self setRunning:NO];
+//    }
     
     
     NSDictionary* leftDict = self.collisionPoints[currentPointIndex];

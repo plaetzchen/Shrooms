@@ -8,10 +8,18 @@
 
 #import "SPSprite.h"
 
-@interface LevelGround : SPSprite
+@interface LevelGround : SPSprite {
+    SPImage *image1;
+    SPImage *image2;
+    float mCurStep;
+    float mSpeed;
+    int currentPart;
+    BOOL running;
+}
 
 @property (nonatomic, retain)SPImage *groundImage;
+@property (nonatomic, retain)NSArray *levelParts;
 
-- (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots;
+- (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots speed:(float)speed;
 
 @end
