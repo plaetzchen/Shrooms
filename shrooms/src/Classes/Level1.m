@@ -17,6 +17,8 @@
 
 @implementation Level1
 
+float speed = 2.0;
+
 @synthesize collisionPoints;
 
 
@@ -48,7 +50,7 @@
         [bear setY:ground.height*0.4];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
-        [ground addChild:bear atIndex:1];
+        [ground addChild:bear atIndex:parts.count];
         
         [self addChild:ground atIndex:3];
         
@@ -93,8 +95,10 @@
 
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
     
-    ground.x -= 2.0f;
-    bear.x += 2.0f;
+    ground.x -= 2.0f*speed;
+    bear.x += 2.0f*speed;
+    
+    speed = speed * 1.01;
     
     NSDictionary* leftDict = self.collisionPoints[currentPointIndex];
     NSDictionary* rightDict = self.collisionPoints[currentPointIndex+1];
