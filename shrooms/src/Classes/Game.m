@@ -4,6 +4,7 @@
 //
 
 #import "Game.h" 
+#import "MainMenu.h"
 #import "Level1.h"
 @implementation Game
 
@@ -19,8 +20,10 @@
 		[self addChild:mContents];
 		[mContents release];
         
-        currentScene = [[Level1 alloc]init];
+        currentScene = [[MainMenu alloc]init];
         [self addChild:currentScene];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newgame:) name:@"newGamePressed" object:nil];
 
     }
     return self;
@@ -35,4 +38,9 @@
     [currentScene swipeUp];
 }
 
+- (void)newgame:(NSNotification*)event {
+    [self removeAllChildren];
+    currentScene = [[Level1 alloc]init];
+    [self addChild:currentScene];
+}
 @end
