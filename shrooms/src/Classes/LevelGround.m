@@ -15,7 +15,6 @@
 - (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots {
     self = [super init];
     if (self){
-        //SPRenderTexture *renderTexture = [[SPRenderTexture alloc] initWithWidth:1440*parts.count height:320];
         
         for (int i=0; i<parts.count; ++i)
         {

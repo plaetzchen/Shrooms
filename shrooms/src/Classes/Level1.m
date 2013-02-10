@@ -89,11 +89,13 @@ float speed = 2.0;
 - (void)oneFingerTouched {
     [bear setRunning:YES];
     [forest1 start];
+    if (bear.jumping) {
+        [bear jumpHigh];
+    }
 }
 
 - (void)swipeUp {
     [bear jump];
-    
 }
 
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
@@ -125,6 +127,8 @@ float speed = 2.0;
         yOffSet = leftPoint.y / (slope * leftPoint.x);
     }
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
+    
+    bear.rotation = slope;
     
     SPPoint *checkPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
 //    
