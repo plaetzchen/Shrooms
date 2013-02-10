@@ -30,7 +30,7 @@
         forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest3];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:5 direction:BE_PARALLAX_DIRECTION_LEFT];
+        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
         [self addChild:grass];
         
         bear = [[Bear alloc]init];
@@ -92,7 +92,7 @@
     
     CGFloat slope = - ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
     CGFloat yOffSet = 0;
-    if (slope == 0 || slope > 100) {
+    if (slope == 0 || slope > 1) {
         yOffSet = leftPoint.y;
     }
     else {
@@ -123,12 +123,18 @@
     } else {
         NSLog(@"drunter");
     }
-    if (slope < 100)
-        bear.rotation = slope;
-    else
+    float rotation = fmodf( slope , PI / 4);
+    NSLog(@"rotation: %f", rotation);
+
+    if (rotation < 1 || rotation > 1){
+        bear.rotation =  rotation;
+//        bear.y = - checkPoint.y;
+    }
+    else{
         bear.rotation = 0;
+    }
     //bear.y = -checkPoint.y;
-    if (currentPointIndex+2 == collisionPoints.count){
+    if (currentPointIndex+2 >= collisionPoints.count){
         currentPointIndex = 0;
     } else if (currentGrassPoint.x >= rightPoint.x){
         currentPointIndex++;
