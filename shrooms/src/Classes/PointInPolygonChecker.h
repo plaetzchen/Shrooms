@@ -14,5 +14,5 @@
 
 -(id)initWithArray:(NSArray*) arrayOfPointDicts;
 
--(BOOL) checkIfPointInPolygon:(CGPoint) point;
+-(BOOL) checkIfPointInPolygon:(SPPoint *) point;
 @end

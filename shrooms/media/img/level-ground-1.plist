@@ -6,6 +6,12 @@
 		<key>x</key>
 		<integer>0</integer>
 		<key>y</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>x</key>
+		<integer>0</integer>
+		<key>y</key>
 		<integer>80</integer>
 	</dict>
 	<dict>
@@ -73,6 +79,12 @@
 		<real>1</real>
 		<key>y</key>
 		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>x</key>
+		<string>0</string>
+		<key>y</key>
+		<string>1440</string>
 	</dict>
 </array>
 </plist>

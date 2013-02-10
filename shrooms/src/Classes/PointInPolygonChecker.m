@@ -12,7 +12,7 @@
 }
 
 @property (nonatomic) int    polySides;
-@property (nonatomic) CGPoint testpoint;
+@property (nonatomic) SPPoint *testpoint;
 
 @end
 
@@ -31,13 +31,14 @@
     self = [self init];
     if (self) {
         self.pointList = arrayOfPointDicts;
+        self.polySides = self.pointList.count;
     }
     return self;
 }
 
 
 
--(BOOL) checkIfPointInPolygon:(CGPoint) point
+-(BOOL) checkIfPointInPolygon:(SPPoint *) point
 {
     self.testpoint = point;
     int numberOfPoints = [self.pointList count];
@@ -81,10 +82,10 @@
     bool  oddNodes=NO      ;
     
     for (i=0; i<_polySides; i++) {
-        if ((polyY[i]< y && polyY[j]>=y
-             ||   polyY[j]< y && polyY[i]>=y)
-            &&  (polyX[i]<=x || polyX[j]<=x)) {
-            oddNodes^=(polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x); }
+        if (polyY[i]<y && polyY[j]>=y
+            ||  polyY[j]<y && polyY[i]>=y) {
+            if (polyX[i]+(y-polyY[i])/(polyY[j]-polyY[i])*(polyX[j]-polyX[i])<x) {
+                oddNodes=!oddNodes; }}
         j=i; }
     
     return oddNodes; }

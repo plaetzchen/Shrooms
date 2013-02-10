@@ -31,6 +31,7 @@
 		[self addChild:forest3];
         
         grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:5 direction:BE_PARALLAX_DIRECTION_LEFT];
+        
         [self addChild:grass];
         
         bear = [[Bear alloc]init];
@@ -100,32 +101,31 @@
     }
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
     
-    CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
+    SPPoint *checkPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
+//    
+//    SPQuad *debugQuad = [[SPQuad alloc] initWithWidth:10 height:10 color:SP_COLOR(arc4random() % 255, arc4random() % 255, arc4random() % 255)];
+//    [debugQuad setX:checkPoint.x];
+//    [debugQuad setY:checkPoint.y];
+//    [grass addChild:debugQuad];
     
     BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:checkPoint];
     NSLog(@"pointIsInPoly: %i", pointIsInPoly);
+    NSLog(@"Checkpoint: %@",checkPoint.description);
     
-    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255, arc4random() %255)];
-    [debugQuad setX: bearFrontFootCheckPoint.x];
-    [debugQuad setY: bearFrontFootCheckPoint.y];
-    
-    [self addChild:debugQuad];
-    
-    NSLog(@"slope: %f", slope);
-    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
-    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
-    
-    CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
-    
-    if (deltaBearFoot < 0){
-        NSLog(@"drüber");
-    } else {
-        NSLog(@"drunter");
-    }
-    if (slope < 100)
-        bear.rotation = slope;
-    else
-        bear.rotation = 0;
+//    NSLog(@"slope: %f", slope);
+//    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
+//    
+//    CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
+//    
+//    if (deltaBearFoot < 0){
+//        NSLog(@"drüber");
+//    } else {
+//        NSLog(@"drunter");
+//    }
+//    if (slope < 100)
+//        bear.rotation = slope;
+//    else
+//        bear.rotation = 0;
     //bear.y = -checkPoint.y;
     if (currentPointIndex+2 == collisionPoints.count){
         currentPointIndex = 0;
