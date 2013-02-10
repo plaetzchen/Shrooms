@@ -142,7 +142,7 @@ float speed = 2.0;
     bear.rotation = slope;
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
-    SPPoint *checkPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
+    SPPoint *polycheckPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
 //    
 //    SPQuad *debugQuad = [[SPQuad alloc] initWithWidth:10 height:10 color:SP_COLOR(arc4random() % 255, arc4random() % 255, arc4random() % 255)];
 //    [debugQuad setX:checkPoint.x];
@@ -158,9 +158,9 @@ float speed = 2.0;
     [debugQuad setRotation:bear.rotation];
     [self addChild:debugQuad];
     
-    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:checkPoint];
+    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:polycheckPoint];
     NSLog(@"pointIsInPoly: %i", pointIsInPoly);
-    NSLog(@"Checkpoint: %@",checkPoint.description);
+    NSLog(@"polycheckPoint: %@",polycheckPoint.description);
     NSLog(@"slope: %f", slope);
     NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
     NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
