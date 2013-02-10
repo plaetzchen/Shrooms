@@ -36,10 +36,10 @@ float speed = 2.0;
         
         SPImage *ground1 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
         SPImage *ground2 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-2.png"];
-        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-3.png"];
-        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-4.png"];
+        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-4.png"];
+        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-6.png"];
         SPImage *ground5 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-5.png"];
-        SPImage *ground6 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-6.png"];
+        SPImage *ground6 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-3.png"];
 
         
         NSArray *parts = @[ground1,ground2,ground3,ground4,ground5,ground6];
@@ -96,15 +96,29 @@ float speed = 2.0;
     
 }
 
+- (void)setRunning:(BOOL)running {
+    if (running){
+        [bear setRunning:YES];
+        [forest1 start];
+        [forest2 start];
+        [forest3 start];
+        [sky start];
+    } else {
+        [bear setRunning:NO];
+        [forest1 stop];
+        [forest2 stop];
+        [forest3 stop];
+        [sky stop];
+    }
+}
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
     
-    NSLog(@"speed: %f",ground.x + self.width);
-    if (ground.x + self.width > -ground.x) {
+    if (-ground.x < (1440*6)-self.stage.width) {
         ground.x -= 2.0f*speed;
         bear.x += 2.0f*speed;
         speed = speed * 1.01;
     } else {
-        [bear setRunning:NO];
+        [self setRunning:NO];
     }
     
     
