@@ -35,11 +35,14 @@ float speed = 2.0;
 		[self addChild:forest3 atIndex:2];
         
         SPImage *ground1 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
-        SPImage *ground2 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
-        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
-        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
+        SPImage *ground2 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-2.png"];
+        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-3.png"];
+        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-4.png"];
+        SPImage *ground5 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-5.png"];
+        SPImage *ground6 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-6.png"];
 
-        NSArray *parts = @[ground1,ground2,ground3,ground4];
+        
+        NSArray *parts = @[ground1,ground2,ground3,ground4,ground5,ground6];
         
        ground = [[LevelGround alloc]initWithParts:parts slots:nil];
 
@@ -95,10 +98,15 @@ float speed = 2.0;
 
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
     
-    ground.x -= 2.0f*speed;
-    bear.x += 2.0f*speed;
+    NSLog(@"speed: %f",ground.x + self.width);
+    if (ground.x + self.width > -ground.x) {
+        ground.x -= 2.0f*speed;
+        bear.x += 2.0f*speed;
+        speed = speed * 1.01;
+    } else {
+        [bear setRunning:NO];
+    }
     
-    speed = speed * 1.01;
     
     NSDictionary* leftDict = self.collisionPoints[currentPointIndex];
     NSDictionary* rightDict = self.collisionPoints[currentPointIndex+1];
