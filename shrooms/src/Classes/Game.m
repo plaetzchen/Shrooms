@@ -8,20 +8,20 @@
 #import "Level1.h"
 @implementation Game
 
-
 - (id)initWithWidth:(float)width height:(float)height
 {
     if ((self = [super initWithWidth:width height:height]))
     {
-        mContents = [[SPSprite alloc] init];
-		mContents.x = 0;
-        [mContents setWidth:self.width];
-        [mContents setHeight:self.height];
-		[self addChild:mContents];
-		[mContents release];
+//        mContents = [[SPSprite alloc] init];
+//		mContents.x = 0;
+//        [mContents setWidth:self.width];
+//        [mContents setHeight:self.height];
+//		[self addChild:mContents];
+//		[mContents release];
         
-        currentScene = [[MainMenu alloc]init];
-        [self addChild:currentScene];
+        MainMenu *menuScene = [[MainMenu alloc]init];
+        [self showScene:menuScene];
+        [menuScene release];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newgame:) name:@"newGamePressed" object:nil];
 
@@ -39,8 +39,18 @@
 }
 
 - (void)newgame:(NSNotification*)event {
-    [self removeAllChildren];
-    currentScene = [[Level1 alloc]init];
-    [self addChild:currentScene];
+    
+    Level1 *levelScene = [[Level1 alloc]init];
+    [self showScene:levelScene];
+    [levelScene release];
 }
+
+- (void)showScene:(Scene *)scene {
+    if ([self containsChild:currentScene]) {
+        [self removeChild:currentScene];
+    }
+    [self addChild:scene];
+    currentScene = scene;
+}
+
 @end

@@ -42,21 +42,21 @@ float speed = 2.0;
 //        
 //        ground.y = self.height - ground.height;
         
-        SPImage *ground1 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-1.png"];
+        //SPImage *ground1 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-1.png"];
         //SPImage *ground2 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-2.png"];
         //ground2.x = ground1.width;
         
         //float width = ground1.width + ground2.width;
 
-        SPRenderTexture *groundTexture = [[SPRenderTexture alloc]initWithWidth:1440 height:320];
-        [groundTexture bundleDrawCalls:^{
-            [groundTexture drawObject:ground1];
+        //SPRenderTexture *groundTexture = [[SPRenderTexture alloc]initWithWidth:1440 height:320];
+        //[groundTexture bundleDrawCalls:^{
+           // [groundTexture drawObject:ground1];
             //[groundTexture drawObject:ground2];
-        }];
+        //}];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:groundTexture speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
+        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:grass atIndex:3];
-        
+
         bear = [[Bear alloc]init];
         [bear setY:ground.height*0.4];
         [bear setScaleX:0.5f];
@@ -154,31 +154,31 @@ float speed = 2.0;
     }
     CGFloat yCheckPoint = bearFrontFootCheckPoint.x * slope + yOffSet;
     
-    bear.rotation = slope;
+    //bear.rotation = slope;
     CGPoint checkPoint = CGPointMake(bearFrontFootCheckPoint.x, yCheckPoint);
     
-    SPPoint *polycheckPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
+//    SPPoint *polycheckPoint = [[SPPoint alloc]initWithX:bearFrontFootCheckPoint.x y:bear.y];
 //    
 //    SPQuad *debugQuad = [[SPQuad alloc] initWithWidth:10 height:10 color:SP_COLOR(arc4random() % 255, arc4random() % 255, arc4random() % 255)];
 //    [debugQuad setX:checkPoint.x];
 //    [debugQuad setY:checkPoint.y];
 //    [grass addChild:debugQuad];
 
-    SPPoint *testPoint = [SPPoint pointWithX:bear.bounds.x-40 y:bear.bounds.y-20];
-    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255,arc4random() %255)];
-    [debugQuad setX:testPoint.x+bear.width];
-    [debugQuad setY:testPoint.y+bear.height];
-    [debugQuad setPivotX:bear.pivotX+10];
-    [debugQuad setPivotY:bear.pivotY+10];
-    [debugQuad setRotation:bear.rotation];
-    [self addChild:debugQuad];
-    
-    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:polycheckPoint];
-    NSLog(@"pointIsInPoly: %i", pointIsInPoly);
-    NSLog(@"polycheckPoint: %@",polycheckPoint.description);
-    NSLog(@"slope: %f", slope);
-    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
-    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
+//    SPPoint *testPoint = [SPPoint pointWithX:bear.bounds.x-40 y:bear.bounds.y-20];
+//    SPQuad *debugQuad = [[SPQuad alloc]initWithWidth:10 height:10 color:SP_COLOR(arc4random() %255, arc4random() %255,arc4random() %255)];
+//    [debugQuad setX:testPoint.x+bear.width];
+//    [debugQuad setY:testPoint.y+bear.height];
+//    [debugQuad setPivotX:bear.pivotX+10];
+//    [debugQuad setPivotY:bear.pivotY+10];
+//    [debugQuad setRotation:bear.rotation];
+//    [self addChild:debugQuad];
+//    
+//    BOOL pointIsInPoly = [self.polychecker checkIfPointInPolygon:polycheckPoint];
+//    NSLog(@"pointIsInPoly: %i", pointIsInPoly);
+//    NSLog(@"polycheckPoint: %@",polycheckPoint.description);
+//    NSLog(@"slope: %f", slope);
+//    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
+//    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
     
     CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
     
