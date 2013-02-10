@@ -20,6 +20,8 @@
 @property (nonatomic, retain)SPImage *groundImage;
 @property (nonatomic, retain)NSArray *levelParts;
 
+@property (nonatomic) float mCurStep;
+
 - (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots speed:(float)speed;
 
 @end

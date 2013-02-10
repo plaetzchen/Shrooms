@@ -9,7 +9,9 @@
 #import "Level1.h"
 #import "PointInPolygonChecker.h"
 
-@interface Level1()
+@interface Level1(){
+    float whereWeAre;
+}
 
 @property (nonatomic, retain) PointInPolygonChecker* polychecker;
 
@@ -34,13 +36,14 @@ float speed = 2.0;
         forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
 		[self addChild:forest3 atIndex:2];
 
-//        
-//        NSArray *parts = @[@"level-ground-1.png",@"level-ground-2.png",@"level-ground-4.png",@"level-ground-6.png",@"level-ground-5.png",@"level-ground-3.png"];
-//        
-//       ground = [[LevelGround alloc]initWithParts:parts slots:nil speed:10];
-//
-//        
-//        ground.y = self.height - ground.height;
+        
+        NSArray *parts = @[@"level-ground-1.png",@"level-ground-2.png"];
+        
+       ground = [[LevelGround alloc]initWithParts:parts slots:nil speed:10];
+
+        
+        ground.y = self.height - ground.height;
+        [self addChild:ground atIndex:3];
         
         //SPImage *ground1 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-1.png"];
         //SPImage *ground2 = [[SPImage alloc] initWithContentsOfFile:@"level-ground-2.png"];
@@ -54,8 +57,8 @@ float speed = 2.0;
             //[groundTexture drawObject:ground2];
         //}];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
-		[self addChild:grass atIndex:3];
+        //grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:10 direction:BE_PARALLAX_DIRECTION_LEFT];
+		//[self addChild:grass atIndex:3];
 
         bear = [[Bear alloc]init];
         [bear setY:ground.height*0.4];
@@ -74,14 +77,17 @@ float speed = 2.0;
         
         NSArray* levelGround1 = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-1" ofType:@"plist"]];
         NSArray* levelGround2 = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"level-ground-2" ofType:@"plist"]];
-        
-        self.collisionPoints = @[levelGround1,levelGround2];
+        NSMutableArray* levelGroundCombined = [levelGround1 mutableCopy];
+        [levelGroundCombined addObjectsFromArray:levelGround2];
+        self.collisionPoints = levelGroundCombined;
         currentCollisionPointsIndex = 0;
         currentPointIndex = 0;
         
         PointInPolygonChecker* polychecker = [[PointInPolygonChecker alloc] initWithArray:self.collisionPoints];
         self.polychecker = polychecker;
         [polychecker release];
+        
+        whereWeAre = 0;
         
     }
     
@@ -100,11 +106,9 @@ float speed = 2.0;
 }
 
 - (void)oneFingerTouched {
-    [bear setRunning:YES];
-    [forest1 start];
-    if (bear.jumping) {
-        [bear jumpHigh];
-    }
+    //[bear setRunning:YES];
+    //[forest1 start];
+    [bear jumpHigh];
 }
 
 - (void)swipeUp {
@@ -138,18 +142,23 @@ float speed = 2.0;
 //        [self setRunning:NO];
 //    }
     
-    NSArray* currentCollissionPoints = [self.collisionPoints objectAtIndex:currentCollisionPointsIndex];
+    NSArray* currentCollissionPoints = self.collisionPoints;
     NSDictionary* leftDict = currentCollissionPoints[currentPointIndex];
     NSDictionary* rightDict = currentCollissionPoints[currentPointIndex+1];
     CGPoint leftPoint = CGPointMake([leftDict[@"x"] floatValue], [leftDict[@"y"] floatValue]);
     CGPoint rightPoint = CGPointMake([rightDict[@"x"] floatValue], [rightDict[@"y"] floatValue]);
 
-    CGPoint currentGrassPoint = CGPointMake(grass.bounds.x*-1,0);
+    whereWeAre += 10.0f;
+    CGPoint currentGrassPoint = CGPointMake(whereWeAre,0);
+    
+    NSLog(@"ground.mCurStep %f", ground.mCurStep);
     CGPoint bearFrontFootCheckPoint = CGPointMake(currentGrassPoint.x+bear.x-bear.width, bear.y+bear.height);
     
     CGFloat slope = - ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
+    slope = fmodf( slope , PI / 4);
+
     CGFloat yOffSet = 0;
-    if (slope == 0 || slope > 1) {
+    if (slope == 0) {
         yOffSet = leftPoint.y;
     }
     else {
@@ -181,7 +190,8 @@ float speed = 2.0;
 //    NSLog(@"polycheckPoint: %@",polycheckPoint.description);
 //    NSLog(@"slope: %f", slope);
 //    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
-    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
+    NSLog(@"Checkpoint: %@ Leftpoint: %@ Rightpoint: %@",NSStringFromCGPoint(checkPoint),NSStringFromCGPoint(leftPoint),NSStringFromCGPoint(rightPoint));
+    
     
     CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
     
@@ -190,14 +200,13 @@ float speed = 2.0;
     } else {
         NSLog(@"drunter");
     }
-    float rotation = fmodf( slope , PI / 4);
+    float rotation = slope;
     NSLog(@"rotation: %f", rotation);
 
-    if (rotation < 1 || rotation > - 1){
-        if (!bear.jumping) {
-            bear.rotation =  rotation;
-            bear.y = - checkPoint.y+bear.height;
-        }
+    if ((rotation < 1 || rotation > - 1) && !bear.jumping ) {
+//            bear.rotation =  rotation;
+//        bear.y -= deltaBearFoot;
+//            bear.y = - checkPoint.y+bear.height;
     }
     else{
         bear.rotation = 0;
@@ -205,12 +214,13 @@ float speed = 2.0;
     //bear.y = -checkPoint.y;
     if (currentPointIndex+2 >= currentCollissionPoints.count){  // we've reached the end of this ground piece
         currentPointIndex = 0;
-        currentCollisionPointsIndex++;
-        if (currentCollissionPoints >= collisionPoints.count ) {
-            currentCollisionPointsIndex = 0;
-        }
+//        if (currentCollisionPointsIndex  == self.collisionPoints.count -1) {
+//            currentCollisionPointsIndex = 0;
+//        }else{
+//            currentCollisionPointsIndex++;
+//        }
         
-    } else if (currentGrassPoint.x >= rightPoint.x){
+    } else if (bearFrontFootCheckPoint.x >= rightPoint.x){
         currentPointIndex++;
     }
 }

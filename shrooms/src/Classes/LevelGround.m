@@ -10,6 +10,8 @@
 
 @implementation LevelGround
 
+@synthesize  mCurStep;
+
 @synthesize groundImage;
 
 - (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots speed:(float)speed{
@@ -40,18 +42,10 @@
         image2.x -= floor(mCurStep);
         if (image1.x <= -image1.width) {
             image1.x = image2.x+image2.width;
-
-            if (currentPart < self.levelParts.count){
-                [image1 setTexture:[SPTexture textureWithContentsOfFile:[self.levelParts objectAtIndex:currentPart]]];
-                currentPart++;
-                
-            }         }
+        }
         if (image2.x <= -image2.width) {
             image2.x = image1.x+image1.width;
-            if (currentPart < self.levelParts.count){
-                [image2 setTexture:[SPTexture textureWithContentsOfFile:[self.levelParts objectAtIndex:currentPart]]];
-                currentPart++;
-            }        }
+        }
         mCurStep -= floor(mCurStep);
     }
 }

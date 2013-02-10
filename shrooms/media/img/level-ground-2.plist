@@ -4,73 +4,67 @@
 <array>
 	<dict>
 		<key>x</key>
-		<integer>0</integer>
+		<integer>1570</integer>
 		<key>y</key>
 		<integer>80</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>130</integer>
-		<key>y</key>
-		<integer>80</integer>
-	</dict>
-	<dict>
-		<key>x</key>
-		<integer>270</integer>
+		<integer>1710</integer>
 		<key>y</key>
 		<integer>85</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>204</integer>
+		<integer>1744</integer>
 		<key>y</key>
 		<integer>106</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>500</integer>
+		<integer>1940</integer>
 		<key>y</key>
 		<integer>230</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>613</integer>
+		<integer>2053</integer>
 		<key>y</key>
 		<integer>272</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>750</integer>
+		<integer>2190</integer>
 		<key>y</key>
 		<integer>280</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>870</integer>
+		<integer>2310</integer>
 		<key>y</key>
 		<integer>280</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>1010</integer>
+		<integer>2450</integer>
 		<key>y</key>
 		<integer>243</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>1260</integer>
+		<integer>2700</integer>
 		<key>y</key>
 		<integer>125</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>1330</integer>
+		<integer>2770</integer>
 		<key>y</key>
 		<integer>80</integer>
 	</dict>
 	<dict>
 		<key>x</key>
-		<integer>1440</integer>
+		<integer>2880</integer>
 		<key>y</key>
 		<integer>80</integer>
 	</dict>

@@ -28,11 +28,10 @@
         NSArray *frames = [atlas texturesStartingWith:@"bear-pos-"];
         self.bearMoving = [[SPMovieClip alloc] initWithFrames:frames fps:16];
         
-        // add sounds
-        //SPSound *stepSound = [[SPSound alloc] initWithContentsOfFile:@"step.caf"];
-        //[bearMoving setSound:[stepSound createChannel] atIndex:1];
-        //[bearMoving setSound:[stepSound createChannel] atIndex:7];
-        //[stepSound release];
+        SPSound *stepSound = [[SPSound alloc] initWithContentsOfFile:@"bear_step.caf"];
+        [self.bearMoving setSound:[stepSound createChannel] atIndex:0];
+        [self.bearMoving setSound:[stepSound createChannel] atIndex:5];
+        [stepSound release];
         
         // move the clip to the center and add it to the stage
         //mMovie.x = CENTER_X - (int)mMovie.width / 2;
@@ -40,6 +39,7 @@
         [self addChild:self.bearMoving];
         [self.bearMoving release];
         
+        self.jumping = NO;
 
 
 	}
