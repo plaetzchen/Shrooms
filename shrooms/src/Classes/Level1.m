@@ -193,9 +193,11 @@ float speed = 2.0;
     float rotation = fmodf( slope , PI / 4);
     NSLog(@"rotation: %f", rotation);
 
-    if (rotation < 1 || rotation > 1){
+    if (rotation < 1 || rotation > - 1){
         bear.rotation =  rotation;
-        bear.y = - checkPoint.y+bear.height;
+        if (!bear.jumping) {
+            bear.y = - checkPoint.y+bear.height;
+        }
     }
     else{
         bear.rotation = 0;
