@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		B32169E816C7FFA40081C66E /* GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B32169E716C7FFA40081C66E /* GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3 */; };
 		B34F7E8216C6972900BF8239 /* netmera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8116C6972900BF8239 /* netmera.framework */; };
 		B34F7E8516C69B6100BF8239 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8416C69B6100BF8239 /* Twitter.framework */; };
 		B34F7E8716C69B6B00BF8239 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B34F7E8616C69B6B00BF8239 /* libxml2.dylib */; };
@@ -109,6 +110,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "App-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B32169E716C7FFA40081C66E /* GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3"; sourceTree = "<group>"; };
 		B34F7E8116C6972900BF8239 /* netmera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = netmera.framework; path = Vendor/netmera.framework; sourceTree = "<group>"; };
 		B34F7E8416C69B6100BF8239 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B34F7E8616C69B6B00BF8239 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -328,6 +330,7 @@
 		FD6DCE1216C6922D0053D5BF /* media */ = {
 			isa = PBXGroup;
 			children = (
+				B32169E716C7FFA40081C66E /* GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3 */,
 				FD6DCE1416C692350053D5BF /* img */,
 			);
 			name = media;
@@ -528,6 +531,7 @@
 				FDA1F7DE16C7E7A000607DE3 /* shrooms-ground-0@2x.png in Resources */,
 				FDA1F7E716C7F9B400607DE3 /* bear_animated@2x.png in Resources */,
 				FDA1F7E816C7F9B400607DE3 /* bear_animated@2x.xml in Resources */,
+				B32169E816C7FFA40081C66E /* GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

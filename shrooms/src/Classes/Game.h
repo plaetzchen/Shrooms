@@ -11,7 +11,7 @@
 
     SPSprite *mContents;
     Scene *currentScene;
-    
+    SPSoundChannel *mMusicChannel;
 }
 
 

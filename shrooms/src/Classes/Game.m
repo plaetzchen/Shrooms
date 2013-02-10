@@ -23,6 +23,12 @@
         [self showScene:menuScene];
         [menuScene release];
         
+        SPSound *music = [SPSound soundWithContentsOfFile:@"GIANT_SQUID_MARCH_ON_WASHINGTON_-_00_-_1_-_fade__intro_.mp3"];
+        mMusicChannel = [[music createChannel] retain];
+        mMusicChannel.loop = YES;
+        [music play];
+
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newgame:) name:@"newGamePressed" object:nil];
 
     }
