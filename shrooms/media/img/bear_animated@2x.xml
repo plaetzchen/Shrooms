@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:482b5a210f6314dee5a178d1b932959b$ -->
+<TextureAtlas imagePath="bear_animated@2x.png">
+    <SubTexture name="bear-pos-1@2x" x="0" y="1680" width="360" height="240"/>
+    <SubTexture name="bear-pos-2@2x" x="0" y="1440" width="360" height="240"/>
+    <SubTexture name="bear-pos-3@2x" x="0" y="1200" width="360" height="240"/>
+    <SubTexture name="bear-pos-4@2x" x="0" y="960" width="360" height="240"/>
+    <SubTexture name="bear-pos-5@2x" x="0" y="720" width="360" height="240"/>
+    <SubTexture name="bear-pos-6@2x" x="0" y="480" width="360" height="240"/>
+    <SubTexture name="bear-pos-7@2x" x="0" y="240" width="360" height="240"/>
+    <SubTexture name="bear-pos-8@2x" x="0" y="0" width="360" height="240"/>
+</TextureAtlas>

@@ -59,8 +59,8 @@ float speed = 2.0;
 
         bear = [[Bear alloc]init];
         [bear setY:ground.height*0.4];
-        [bear setScaleX:0.5f];
-        [bear setScaleY:0.5f];
+        //[bear setScaleX:0.5f];
+        //[bear setScaleY:0.5f];
         [self addChild:bear atIndex:4];
         
        // [self addChild:ground atIndex:3];
@@ -145,7 +145,7 @@ float speed = 2.0;
     CGPoint rightPoint = CGPointMake([rightDict[@"x"] floatValue], [rightDict[@"y"] floatValue]);
 
     CGPoint currentGrassPoint = CGPointMake(grass.bounds.x*-1,0);
-    CGPoint bearFrontFootCheckPoint = CGPointMake(currentGrassPoint.x+bear.x+bear.width, bear.y+bear.height);
+    CGPoint bearFrontFootCheckPoint = CGPointMake(currentGrassPoint.x+bear.x-bear.width, bear.y+bear.height);
     
     CGFloat slope = - ((rightPoint.y-leftPoint.y) / (rightPoint.x-leftPoint.x));
     CGFloat yOffSet = 0;
@@ -181,11 +181,11 @@ float speed = 2.0;
 //    NSLog(@"polycheckPoint: %@",polycheckPoint.description);
 //    NSLog(@"slope: %f", slope);
 //    NSLog(@"BearFoot: %@", NSStringFromCGPoint(bearFrontFootCheckPoint));
-//    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
+    NSLog(@"Checkpoint: %@",NSStringFromCGPoint(checkPoint));
     
     CGFloat deltaBearFoot = bearFrontFootCheckPoint.y - checkPoint.y;
     
-    if (deltaBearFoot < 0){
+    if (deltaBearFoot > 0){
         NSLog(@"drüber");
     } else {
         NSLog(@"drunter");
@@ -195,7 +195,7 @@ float speed = 2.0;
 
     if (rotation < 1 || rotation > 1){
         bear.rotation =  rotation;
-//        bear.y = - checkPoint.y;
+        bear.y = - checkPoint.y+bear.height;
     }
     else{
         bear.rotation = 0;
