@@ -57,6 +57,8 @@
 		FD9406B816C7C7B100C5D52D /* level-ground-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406AE16C7C7B100C5D52D /* level-ground-5@2x.png */; };
 		FD9406B916C7C7B100C5D52D /* level-ground-6.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406AF16C7C7B100C5D52D /* level-ground-6.png */; };
 		FD9406BA16C7C7B100C5D52D /* level-ground-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406B016C7C7B100C5D52D /* level-ground-6@2x.png */; };
+		FD9406BD16C7D06A00C5D52D /* forest0.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406BB16C7D06A00C5D52D /* forest0.png */; };
+		FD9406BE16C7D06A00C5D52D /* forest0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD9406BC16C7D06A00C5D52D /* forest0@2x.png */; };
 		FDC1FB5D16C6D98A00104203 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC1FB5C16C6D98A00104203 /* libSparrow.a */; };
 		FDC1FB6116C6F72A00104203 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB5F16C6F72A00104203 /* Icon.png */; };
 		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
@@ -148,6 +150,8 @@
 		FD9406AE16C7C7B100C5D52D /* level-ground-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-5@2x.png"; sourceTree = "<group>"; };
 		FD9406AF16C7C7B100C5D52D /* level-ground-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-6.png"; sourceTree = "<group>"; };
 		FD9406B016C7C7B100C5D52D /* level-ground-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-ground-6@2x.png"; sourceTree = "<group>"; };
+		FD9406BB16C7D06A00C5D52D /* forest0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest0.png; sourceTree = "<group>"; };
+		FD9406BC16C7D06A00C5D52D /* forest0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forest0@2x.png"; sourceTree = "<group>"; };
 		FDC1FB5C16C6D98A00104203 /* libSparrow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSparrow.a; path = "../../../../Library/Developer/Xcode/DerivedData/Shrooms-emrswdkoivvfbeakyryghjeqswub/Build/Products/Debug-iphoneos/libSparrow.a"; sourceTree = "<group>"; };
 		FDC1FB5F16C6F72A00104203 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FDC1FB6016C6F72A00104203 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -307,6 +311,8 @@
 		FD6DCE1416C692350053D5BF /* img */ = {
 			isa = PBXGroup;
 			children = (
+				FD9406BB16C7D06A00C5D52D /* forest0.png */,
+				FD9406BC16C7D06A00C5D52D /* forest0@2x.png */,
 				FD9406A716C7C7B100C5D52D /* level-ground-2.png */,
 				FD9406A816C7C7B100C5D52D /* level-ground-2@2x.png */,
 				FD9406A916C7C7B100C5D52D /* level-ground-3.png */,
@@ -463,6 +469,8 @@
 				FD9406B816C7C7B100C5D52D /* level-ground-5@2x.png in Resources */,
 				FD9406B916C7C7B100C5D52D /* level-ground-6.png in Resources */,
 				FD9406BA16C7C7B100C5D52D /* level-ground-6@2x.png in Resources */,
+				FD9406BD16C7D06A00C5D52D /* forest0.png in Resources */,
+				FD9406BE16C7D06A00C5D52D /* forest0@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

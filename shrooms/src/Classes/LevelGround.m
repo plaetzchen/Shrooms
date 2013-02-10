@@ -12,19 +12,47 @@
 
 @synthesize groundImage;
 
-- (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots {
+- (id)initWithParts:(NSArray *)parts slots:(NSArray *)slots speed:(float)speed{
     self = [super init];
     if (self){
+
+        self.levelParts = [NSArray arrayWithArray:parts];
+        mSpeed = speed;
+        image1 = [[SPImage alloc]initWithContentsOfFile:[self.levelParts objectAtIndex:0]];
+        [self addChild:image1 atIndex:0];
         
-        for (int i=0; i<parts.count; ++i)
-        {
-            SPImage *image = [parts objectAtIndex:i];
-            image.x = i * 1440;
-            image.y = 0;
-            [self addChild:image];
-        }
+        image2 = [[SPImage alloc]initWithContentsOfFile:[self.levelParts objectAtIndex:1]];
+        currentPart = 1;
+        image2.x = image1.x+image1.width;
+		[self addChild:image2 atIndex:0];
         
+        [self addEventListener:@selector(onEnterFrame:) atObject:self forType:SP_EVENT_TYPE_ENTER_FRAME];
+        running = YES;
+
     }
     return self;
+}
+
+- (void)onEnterFrame:(SPEnterFrameEvent *)event {
+    if (running){
+        mCurStep += mSpeed;
+        image1.x -= floor(mCurStep);
+        image2.x -= floor(mCurStep);
+        if (image1.x <= -image1.width) {
+            image1.x = image2.x+image2.width;
+
+            if (currentPart < self.levelParts.count){
+                [image1 setTexture:[SPTexture textureWithContentsOfFile:[self.levelParts objectAtIndex:currentPart]]];
+                currentPart++;
+                
+            }         }
+        if (image2.x <= -image2.width) {
+            image2.x = image1.x+image1.width;
+            if (currentPart < self.levelParts.count){
+                [image2 setTexture:[SPTexture textureWithContentsOfFile:[self.levelParts objectAtIndex:currentPart]]];
+                currentPart++;
+            }        }
+        mCurStep -= floor(mCurStep);
+    }
 }
 @end

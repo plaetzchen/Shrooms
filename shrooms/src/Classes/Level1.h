@@ -16,6 +16,7 @@
     BEParallaxSprite *forest1;
     BEParallaxSprite *forest2;
     BEParallaxSprite *forest3;
+    BEParallaxSprite *forest4;
     BEParallaxSprite *grass;
     Bear *bear;
     LevelGround *ground;
