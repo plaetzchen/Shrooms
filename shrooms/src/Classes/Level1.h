@@ -9,6 +9,7 @@
 #import "Scene.h"
 #import "BEParallaxSprite.h"
 #import "Bear.h"
+#import "LevelGround.h"
 
 @interface Level1 : Scene {
     BEParallaxSprite *sky;
@@ -17,6 +18,7 @@
     BEParallaxSprite *forest3;
     BEParallaxSprite *grass;
     Bear *bear;
+    LevelGround *ground;
     NSArray *collisionPoints;
     NSUInteger currentPointIndex;
 }

@@ -46,6 +46,7 @@
 		FD6DCE1E16C693D30053D5BF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6DCE1C16C693D30053D5BF /* bg.png */; };
 		FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1616C6B2BB0053D5BF /* Level1.m */; };
 		FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6DCF1916C6B3F10053D5BF /* Scene.m */; };
+		FD9406A616C7B75200C5D52D /* LevelGround.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9406A516C7B75200C5D52D /* LevelGround.m */; };
 		FDC1FB5D16C6D98A00104203 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC1FB5C16C6D98A00104203 /* libSparrow.a */; };
 		FDC1FB6116C6F72A00104203 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB5F16C6F72A00104203 /* Icon.png */; };
 		FDC1FB6216C6F72A00104203 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC1FB6016C6F72A00104203 /* Icon@2x.png */; };
@@ -125,6 +126,8 @@
 		FD6DCF1616C6B2BB0053D5BF /* Level1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level1.m; sourceTree = "<group>"; };
 		FD6DCF1816C6B3F10053D5BF /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		FD6DCF1916C6B3F10053D5BF /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		FD9406A416C7B75200C5D52D /* LevelGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGround.h; sourceTree = "<group>"; };
+		FD9406A516C7B75200C5D52D /* LevelGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGround.m; sourceTree = "<group>"; };
 		FDC1FB5C16C6D98A00104203 /* libSparrow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSparrow.a; path = "../../../../Library/Developer/Xcode/DerivedData/Shrooms-emrswdkoivvfbeakyryghjeqswub/Build/Products/Debug-iphoneos/libSparrow.a"; sourceTree = "<group>"; };
 		FDC1FB5F16C6F72A00104203 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FDC1FB6016C6F72A00104203 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -307,12 +310,22 @@
 		FD6DCF0F16C6B1950053D5BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FD9406A116C7B73000C5D52D /* Level Helpers */,
 				FD6DCF1516C6B2BB0053D5BF /* Level1.h */,
 				FD6DCF1616C6B2BB0053D5BF /* Level1.m */,
 				FD6DCF1816C6B3F10053D5BF /* Scene.h */,
 				FD6DCF1916C6B3F10053D5BF /* Scene.m */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		FD9406A116C7B73000C5D52D /* Level Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD9406A416C7B75200C5D52D /* LevelGround.h */,
+				FD9406A516C7B75200C5D52D /* LevelGround.m */,
+			);
+			name = "Level Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +441,7 @@
 				FD6DCF1716C6B2BB0053D5BF /* Level1.m in Sources */,
 				FD6DCF1A16C6B3F10053D5BF /* Scene.m in Sources */,
 				B34F7EA516C706DD00BF8239 /* PointInPolygonChecker.m in Sources */,
+				FD9406A616C7B75200C5D52D /* LevelGround.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

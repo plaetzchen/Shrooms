@@ -12,35 +12,45 @@
 @interface Level1()
 
 @property (nonatomic, retain) PointInPolygonChecker* polychecker;
+
 @end
 
 @implementation Level1
 
 @synthesize collisionPoints;
 
+
 - (id)init {
     self = [super init];
     if (self){
         forest1 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest3.png"] speed:1 direction:BE_PARALLAX_DIRECTION_LEFT];
-		[self addChild:forest1];
+		[self addChild:forest1 atIndex:0];
         
         forest2 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest2.png"] speed:2 direction:BE_PARALLAX_DIRECTION_LEFT];
-		[self addChild:forest2];
+		[self addChild:forest2 atIndex:1];
         
         forest3 = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"forest1.png"] speed:4 direction:BE_PARALLAX_DIRECTION_LEFT];
-		[self addChild:forest3];
+		[self addChild:forest3 atIndex:2];
         
-        grass = [BEParallaxSprite parallexSpriteWithTexture:[SPTexture textureWithContentsOfFile:@"level-ground-1.png"] speed:5 direction:BE_PARALLAX_DIRECTION_LEFT];
+        SPImage *ground1 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
+        SPImage *ground2 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
+        SPImage *ground3 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
+        SPImage *ground4 = [[SPImage alloc]initWithContentsOfFile:@"level-ground-1.png"];
+
+        NSArray *parts = @[ground1,ground2,ground3,ground4];
         
-        [self addChild:grass];
+       ground = [[LevelGround alloc]initWithParts:parts slots:nil];
+
+        
+        ground.y = self.height - ground.height;
         
         bear = [[Bear alloc]init];
-        [bear setY:self.height*0.4];
+        [bear setY:ground.height*0.4];
         [bear setScaleX:0.5f];
         [bear setScaleY:0.5f];
-        [self addChild:bear];
+        [ground addChild:bear atIndex:1];
         
-
+        [self addChild:ground atIndex:3];
         
 
         
@@ -82,7 +92,10 @@
 }
 
 - (void)onEnterFrame:(SPEnterFrameEvent *)event {
-
+    
+    ground.x -= 2.0f;
+    bear.x += 2.0f;
+    
     NSDictionary* leftDict = self.collisionPoints[currentPointIndex];
     NSDictionary* rightDict = self.collisionPoints[currentPointIndex+1];
     CGPoint leftPoint = CGPointMake([leftDict[@"x"] floatValue], [leftDict[@"y"] floatValue]);
