@@ -5,6 +5,9 @@
 //  Created by Jörg Bühmann on 09.02.13.
 //
 //
+/*  Based^W copied from the article on http://alienryderflex.com/polygon/
+*   Doesn't include the optimizations
+*/
 
 #import "PointInPolygonChecker.h"
 
